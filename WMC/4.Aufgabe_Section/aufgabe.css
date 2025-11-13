@@ -1,0 +1,26 @@
+/* AUFGABE 1: 1>Paragraph 1 in der ersten Section */
+.red .class-1 { color: gold; }
+
+/* AUFGABE 2: selektiere 3>Paragraph Z */
+.blue div div .class-2 { color: red; }
+
+/* AUFGABE 3: 2>Paragraph in erster und zweiter Section */
+.red .class-2,
+.blue .class-2 { color: green; }
+
+/* AUFGABE 4: 3>Paragraph Z in der zweiten Section */
+.blue div div .class-2 { color: orange; }
+
+/* AUFGABE 5: alle grünen List Items */
+.green li { color: purple; }
+
+/* AUFGABE 6: jeweils die ersten beiden List Items */
+li:nth-child(-n+2) { color: brown; }
+
+/* AUFGABE 7: jeweils die ersten beiden List Items der blauen und grünen Section */
+.blue li:nth-child(-n+2),
+.green li:nth-child(-n+2) { color: pink; }
+
+/* AUFGABE 8: Paragraphs in den ersten beiden Sections */
+.red p,
+.blue p { color: grey; }
