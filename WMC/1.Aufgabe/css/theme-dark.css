@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #181a1b;
+    color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #232526;
+    border-bottom: 1px solid #2c2e2f;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f3f3f3;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    transition: background 0.2s;
+}
+nav a:hover {
+    background: #2c2e2f;
+}
+
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section, aside {
+    background: #232526;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    margin-bottom: 2rem;
+    padding: 1.5rem 1.2rem;
+}
+
+section h2, aside h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #f3f3f3;
+}
+caption {
+    caption-side: top;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #f3f3f3;
+}
+thead {
+    background: #2c2e2f;
+}
+th, td {
+    padding: 0.7rem 0.5rem;
+    text-align: left;
+}
+tbody tr:nth-child(even) {
+    background: #232526;
+}
+tbody tr:nth-child(odd) {
+    background: #181a1b;
+}
+th {
+    font-weight: 600;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+label {
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+    color: #f3f3f3;
+}
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #232526;
+    color: #f3f3f3;
+}
+button {
+    background: #f3f3f3;
+    color: #181a1b;
+    border: none;
+    border-radius: 4px;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover {
+    background: #bdbdbd;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 0.95rem;
+    padding: 1.5rem 0 0.5rem 0;
+    background: none;
+    border: none;
+}

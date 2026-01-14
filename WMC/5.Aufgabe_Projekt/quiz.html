@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpongeBob Quiz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="bilder/titel.png">
+    
+    
+    
+    <style>
+        .quiz-card {
+            margin-bottom: 2rem;
+        }
+        .answer-option {
+            transition: all 0.3s ease;
+        }
+        .answer-option:hover {
+            background-color: rgba(255, 217, 61, 0.2);
+        }
+        .correct-answer {
+            background-color: #d4edda !important;
+            border-color: #28a745 !important;
+        }
+        .wrong-answer {
+            background-color: #f8d7da !important;
+            border-color: #dc3545 !important;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg custom-nav">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">SpongeBob Welt</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Navigation umschalten">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bikini-bottom.html">Bikini Bottom</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+                    <li class="nav-item">
+                        <label class="theme-toggle" aria-label="Theme umschalten">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="toggle-thumb"></span>
+                            <span class="icon-sun">☀️</span>
+                            <span class="icon-moon">🌙</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>SpongeBob Quiz</h1>
+        <p>Teste dein Wissen über Bikini Bottom! Klicke auf die Fragen, um die Antworten zu sehen.</p>
+    </section>
+
+    <section class="section">
+        <h2>Quiz</h2>
+
+
+        <div class="quiz-card">
+            <div class="accordion" id="quiz1">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="false">
+                            <strong>Frage 1:</strong> &nbsp; In welchem Gebäude wohnt SpongeBob?
+                        </button>
+                    </h2>
+                    <div id="q1" class="accordion-collapse collapse" data-bs-parent="#quiz1">
+                        <div class="accordion-body">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q1a1">
+                                    A) In einer Muschel
+                                </button>
+                                <div id="q1a1" class="collapse">
+                                    <div class="alert alert-danger m-2">Falsch du noob</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q1a2">
+                                    B) In einer Ananas
+                                </button>
+                                <div id="q1a2" class="collapse">
+                                    <div class="alert alert-success m-2">Richtig</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q1a3">
+                                    C) In einem Stein
+                                </button>
+                                <div id="q1a3" class="collapse">
+                                    <div class="alert alert-danger m-2">Falsch du noob</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q1a4">
+                                    D) In einer Höhle
+                                </button>
+                                <div id="q1a4" class="collapse">
+                                    <div class="alert alert-danger m-2">Falsch du noob</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="quiz-card">
+            <div class="accordion" id="quiz2">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false">
+                            <strong>Frage 2:</strong> &nbsp; Wie heißt SpongeBobs Haustier?
+                        </button>
+                    </h2>
+                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#quiz2">
+                        <div class="accordion-body">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q2a1">
+                                    A) Larry
+                                </button>
+                                <div id="q2a1" class="collapse">
+                                    <div class="alert alert-danger m-2">Falsch du noob</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q2a2">
+                                    B) Gary
+                                </button>
+                                <div id="q2a2" class="collapse">
+                                    <div class="alert alert-success m-2">Richtig</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q2a3">
+                                    C) Barry
+                                </button>
+                                <div id="q2a3" class="collapse">
+                                    <div class="alert alert-danger m-2">Falsch du noob</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q2a4">
+                                    D) Terry
+                                </button>
+                                <div id="q2a4" class="collapse">
+                                    <div class="alert alert-danger m-2">Falsch du noob</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="quiz-card">
+            <div class="accordion" id="quiz3">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false">
+                            <strong>Frage 3:</strong> &nbsp; Wo arbeitet SpongeBob?
+                        </button>
+                    </h2>
+                    <div id="q3" class="accordion-collapse collapse" data-bs-parent="#quiz3">
+                        <div class="accordion-body">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q3a1">
+                                    A) Im Abfalleimer
+                                </button>
+                                <div id="q3a1" class="collapse">
+                                    <div class="alert alert-danger m-2">Falsch du noob</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q3a2">
+                                    B) In der Krossen Krabbe
+                                </button>
+                                <div id="q3a2" class="collapse">
+                                    <div class="alert alert-success m-2">Richtig</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q3a3">
+                                    C) Bei der Muschelschaufel
+                                </button>
+                                <div id="q3a3" class="collapse">
+                                    <div class="alert alert-danger m-2">Falsch du noob</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q3a4">
+                                    D) Bei Weeny Hut Jr.'s
+                                </button>
+                                <div id="q3a4" class="collapse">
+                                    <div class="alert alert-danger m-2">Falsch du noob</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="quiz-card">
+            <div class="accordion" id="quiz4">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false">
+                            <strong>Frage 4:</strong> &nbsp; Wer ist SpongeBobs bester Freund?
+                        </button>
+                    </h2>
+                    <div id="q4" class="accordion-collapse collapse" data-bs-parent="#quiz4">
+                        <div class="accordion-body">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q4a1">
+                                    A) Thaddäus
+                                </button>
+                                <div id="q4a1" class="collapse">
+                                    <div class="alert alert-danger m-2">FALSCH</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q4a2">
+                                    B) Patrik
+                                </button>
+                                <div id="q4a2" class="collapse">
+                                    <div class="alert alert-success m-2">Richtig</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q4a3">
+                                    C) Mr. Krabs
+                                </button>
+                                <div id="q4a3" class="collapse">
+                                    <div class="alert alert-danger m-2">Falsch.</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q4a4">
+                                    D) Plankton
+                                </button>
+                                <div id="q4a4" class="collapse">
+                                    <div class="alert alert-danger m-2">Wie kann man so dumm sein</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="quiz-card">
+            <div class="accordion" id="quiz5">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false">
+                            <strong>Frage 5:</strong> &nbsp; Welches Instrument spielt Thaddäus?
+                        </button>
+                    </h2>
+                    <div id="q5" class="accordion-collapse collapse" data-bs-parent="#quiz5">
+                        <div class="accordion-body">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q5a1">
+                                    A) Gitarre
+                                </button>
+                                <div id="q5a1" class="collapse">
+                                    <div class="alert alert-danger m-2">Falsch du noob</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q5a2">
+                                    B) Klarinette
+                                </button>
+                                <div id="q5a2" class="collapse">
+                                    <div class="alert alert-success m-2">Richtig</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q5a3">
+                                    C) Schlagzeug
+                                </button>
+                                <div id="q5a3" class="collapse">
+                                    <div class="alert alert-danger m-2">Falsch du noob</div>
+                                </div>
+
+                                <button type="button" class="list-group-item list-group-item-action answer-option" data-bs-toggle="collapse" data-bs-target="#q5a4">
+                                    D) Trompete
+                                </button>
+                                <div id="q5a4" class="collapse">
+                                    <div class="alert alert-danger m-2">Falsch noch immmer.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-warning btn-lg">Startseite</a>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <p>&copy; 2026 SpongeBob Schwammkopf | Alle Rechte vorbehalten</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
