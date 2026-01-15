@@ -28,7 +28,7 @@
                             <span class="icon-moon">🌙</span>
                         </label>
                     </li>
-                    <li class="nav-item"><button type="button" class="offcanvas-btn" onclick="togglePanel()">Klick mich!</button></li>
+                    <li class="nav-item"><button type="button" class="offcanvas-btn" data-bs-toggle="offcanvas" data-bs-target="#sideOffcanvas">Klick mich!</button></li>
                 </ul>
             </div>
         </div>
@@ -48,13 +48,12 @@
 
 
     <section class="section">
-        <h2>🗺️ Karte von Bikini Bottom (Bikini Atoll)</h2>
-        <p style="text-align:center; color: var(--muted);">Die reale Position des Bikini-Atolls, Namensgeber der Stadt unter dem Meer.</p>
+        <h2>Karte von Bikini Bottom (Bikini Atoll)</h2>
+        <p style="text-align:center;">Die reale Position des Bikini-Atolls, Namensgeber der Stadt unter dem Meer.</p>
         <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63009.69094086814!2d165.3639!3d11.5833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x64f7a7cf6db69e7d%3A0x4b1a7e3e4e3e4e3e!2sBikini%20Atoll!5e0!3m2!1sde!2sde!4v1641234567890!5m2!1sde!2sde" allowfullscreen loading="lazy"></iframe>
         </div>
     </section>
-
 
 
 
@@ -171,24 +170,16 @@
 
 
 
-    <div class="side-overlay" id="sideOverlay" onclick="togglePanel()"></div>
-    <div class="side-panel" id="sidePanel">
-        <button class="side-close" onclick="togglePanel()">×</button>
-        <h2>Kleiner Fackt</h2>
-        <p>Wer das liest, liest im Endeffekt genau das, was man grade liest.</p>
+    <!-- Bootstrap 5 Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="sideOffcanvas" aria-labelledby="sideOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title" id="sideOffcanvasLabel">Kleiner Fackt</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Wer das liest, liest im Endeffekt genau das, was man grade liest.</p>
+        </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -196,12 +187,6 @@
         <p>&copy; 2026 SpongeBob Schwammkopf | Alle Rechte vorbehalten</p>
     </footer>
 
-
-
-
-
-
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -28,7 +28,7 @@
                             <span class="icon-moon">🌙</span>
                         </label>
                     </li>
-                    <li class="nav-item"><button type="button" class="offcanvas-btn" onclick="togglePanel()">Klick mich!</button></li>
+                    <li class="nav-item"><button type="button" class="offcanvas-btn" data-bs-toggle="offcanvas" data-bs-target="#sideOffcanvas">Klick mich!</button></li>
                 </ul>
             </div>
         </div>
@@ -566,11 +566,15 @@
 
 
 
-        <div class="side-overlay" id="sideOverlay" onclick="togglePanel()"></div>
-    <div class="side-panel" id="sidePanel">
-        <button class="side-close" onclick="togglePanel()">×</button>
-        <h2>Kleiner Fackt</h2>
-        <p>Wer das liest, liest im Endeffekt genau das, was man grade liest.</p>
+    <!-- Bootstrap 5 Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="sideOffcanvas" aria-labelledby="sideOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title" id="sideOffcanvasLabel">Kleiner Fackt</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Wer das liest, liest im Endeffekt genau das, was man grade liest.</p>
+        </div>
     </div>
 
 
@@ -579,18 +583,7 @@
         <p>&copy; 2026 SpongeBob Schwammkopf | Alle Rechte vorbehalten</p>
     </footer>
 
-
-
-
-
-    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
-
-
 
 </body>
 </html>
