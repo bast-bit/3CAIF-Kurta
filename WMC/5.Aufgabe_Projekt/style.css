@@ -1,99 +1,104 @@
+/* Farbvariablen - Farben im Hellmodus */
 :root {
-  --sponge-yellow: #FFD93D;
-  --sponge-blue: #6BCF7F;
-  --ocean-light: #A8DADC;
-  --ocean-blue: #457B9D;
-  --ocean-dark: #1D3557;
-  --bubble-white: #F1FAEE;
-  --text-dark: #2B2D42;
-  --accent: #E63946;
-  --surface: var(--bubble-white);
-  --surface-strong: #ffffff;
-  --text: var(--text-dark);
-  --muted: #556;
-  --navbar-bg: rgba(255,255,255,0.78);
+  --sponge-yellow: #FFD93D; /* Gelbe Primärfarbe */
+  --sponge-blue: #6BCF7F; /* Grüne Sekundärfarbe */
+  --ocean-light: #A8DADC; /* Helles Blau */
+  --ocean-blue: #457B9D; /* Mittleres Blau */
+  --ocean-dark: #1D3557; /* Dunkles Blau */
+  --bubble-white: #F1FAEE; /* Weißlich */
+  --text-dark: #2B2D42; /* Dunkler Text */
+  --accent: #E63946; /* Rotakzent */
+  --surface: var(--bubble-white); /* Hintergrundoberfläche */
+  --surface-strong: #ffffff; /* Weiß-Oberfläche */
+  --text: var(--text-dark); /* Textfarbe */
+  --muted: #556; /* Gedämpfte Farbe */
+  --navbar-bg: rgba(255,255,255,0.78); /* Navigationsleisten-Hintergrund */
 }
 
+/* Farbvariablen - Farben im Dunkelmodus */
 body[data-theme="dark"] {
-  --sponge-yellow: #F4C534;
-  --sponge-blue: #4AAE73;
-  --ocean-light: #22303C;
-  --ocean-blue: #17212B;
-  --ocean-dark: #0E1620;
-  --bubble-white: #1E2A36;
-  --surface: #1F2D3A;
-  --surface-strong: #111922;
-  --text: #E8EDF2;
-  --muted: #9FB3C8;
-  --accent: #FF6B6B;
-  --navbar-bg: rgba(12,18,26,0.92);
+  --sponge-yellow: #F4C534; /* Gelbe Primärfarbe dunkel */
+  --sponge-blue: #4AAE73; /* Grüne Sekundärfarbe dunkel */
+  --ocean-light: #22303C; /* Helles Blau dunkel */
+  --ocean-blue: #17212B; /* Mittleres Blau dunkel */
+  --ocean-dark: #0E1620; /* Dunkles Blau dunkel */
+  --bubble-white: #1E2A36; /* Weißlich dunkel */
+  --surface: #1F2D3A; /* Hintergrundoberfläche dunkel */
+  --surface-strong: #111922; /* Weiß-Oberfläche dunkel */
+  --text: #E8EDF2; /* Textfarbe dunkel */
+  --muted: #9FB3C8; /* Gedämpfte Farbe dunkel */
+  --accent: #FF6B6B; /* Rotakzent dunkel */
+  --navbar-bg: rgba(12,18,26,0.92); /* Navigationsleisten-Hintergrund dunkel */
 }
 
+/* Reset aller Elemente */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* Body Styling - Hintergrund und Text */
 body {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  background: radial-gradient(circle at 20% 20%, rgba(255,217,61,0.18), transparent 35%),
-              radial-gradient(circle at 80% 0%, rgba(107,207,127,0.18), transparent 30%),
-              linear-gradient(135deg, var(--ocean-light) 0%, var(--ocean-blue) 100%);
-  color: var(--text);
-  min-height: 100vh;
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Comic Sans Schriftart */
+  background: radial-gradient(circle at 20% 20%, rgba(255,217,61,0.18), transparent 35%), /* Gelber Farbverlauf */
+              radial-gradient(circle at 80% 0%, rgba(107,207,127,0.18), transparent 30%), /* Grüner Farbverlauf */
+              linear-gradient(135deg, var(--ocean-light) 0%, var(--ocean-blue) 100%); /* Blaues Hintergrund-Gradient */
+  color: var(--text); /* Textfarbe */
+  min-height: 100vh; /* Mindesthöhe - volle Bildschirmhöhe */
 }
 
-/* Navbar */
+/* Navbar - Navigationsleiste */
 .custom-nav {
-  background: var(--navbar-bg);
-  backdrop-filter: blur(12px);
-  padding: 1rem 2rem;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 16px;
-  margin: 1rem auto 0;
-  max-width: 1200px;
+  background: var(--navbar-bg); /* Hintergrund der Navbar */
+  backdrop-filter: blur(12px); /* Blur-Effekt hinter der Navbar */
+  padding: 1rem 2rem; /* Innenpaddung */
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08); /* Schatteneffekt */
+  border: 1px solid rgba(255,255,255,0.06); /* Grenze */
+  border-radius: 16px; /* Abgerundete Ecken */
+  margin: 1rem auto 0; /* Außenpaddung */
+  max-width: 1200px; /* Maximale Breite */
 }
 
+/* Navbar Brand - Logo */
 .navbar-brand {
-  font-size: 1.8rem; 
-  font-weight: bold; 
-  color: var(--text); 
-  text-decoration: none; 
+  font-size: 1.8rem; /* Schriftgröße */
+  font-weight: bold; /* Fetter Text */
+  color: var(--text); /* Textfarbe */
+  text-decoration: none; /* Keine Unterstreichung */
 }
 
+/* Navbar Links - Navigation */
 .navbar-nav .nav-link { 
-  color: var(--text); 
-  font-weight: 700;
-  transition: color 0.3s ease, 
-  transform 0.2s ease;
+  color: var(--text); /* Linkfarbe */
+  font-weight: 700; /* Fetter Text */
+  transition: color 0.3s ease, /* Farb-Animation */
+  transform 0.2s ease; /* Transformations-Animation */
 }
 
+/* Navbar Links - Hover Effekt */
 .navbar-nav .nav-link:hover { 
-  color: var(--accent);
-  transform: translateY(-1px);
+  color: var(--accent); /* Farbe beim Hovern */
+  transform: translateY(-1px); /* Leicht nach oben bewegen */
 }
 
+/* Navbar Toggler - Hamburger Menu */
 .navbar-toggler { 
-  border-color: rgba(0,0,0,0.25); 
+  border-color: rgba(0,0,0,0.25); /* Grenzenfarbe */
 }
 
+/* Navbar Toggler Dark Mode */
 body[data-theme="dark"] .navbar-toggler { 
-  border-color: rgba(255,255,255,0.35); 
+  border-color: rgba(255,255,255,0.35); /* Grenzenfarbe im Dunkelmodus */
 }
 
-
-
-
-
-/*Hell Schwarz */
-
+/* Hamburger Icon */
 .navbar-toggler-icon {
-  width: 1.5em; 
-  height: 1.5em; 
-  background-size: 100% 100%;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,0.7)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  width: 1.5em; /* Breite */
+  height: 1.5em; /* Höhe */
+  background-size: 100% 100%; /* Hintergrundgröße */
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,0.7)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Hamburger SVG */
 }
 
+/* Hamburger Icon Dark Mode */
 body[data-theme="dark"] .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.85)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.85)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Hamburger SVG dunkel */
 }
 
 
@@ -101,29 +106,33 @@ body[data-theme="dark"] .navbar-toggler-icon {
 
 
 
+/* Hero Section - Großer Banner oben */
 .hero {
-  max-width: 1200px; 
-  margin: 3rem auto 2.5rem; 
-  padding: 4.5rem 3rem;
-  border-radius: 26px;
-  background: radial-gradient(circle at 20% 20%, rgba(255,217,61,0.25), transparent 40%),
-              radial-gradient(circle at 80% 0%, rgba(107,207,127,0.25), transparent 35%),
-              linear-gradient(135deg, var(--ocean-light) 0%, var(--ocean-blue) 100%);
-  color: var(--text); 
-  text-align: center;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-  border: 1px solid rgba(255,255,255,0.08);
+  max-width: 1200px; /* Maximale Breite */
+  margin: 3rem auto 2.5rem; /* Außenpaddung */
+  padding: 4.5rem 3rem; /* Innenpaddung */
+  border-radius: 26px; /* Abgerundete Ecken */
+  background: radial-gradient(circle at 20% 20%, rgba(255,217,61,0.25), transparent 40%), /* Gelbes Gradient */
+              radial-gradient(circle at 80% 0%, rgba(107,207,127,0.25), transparent 35%), /* Grünes Gradient */
+              linear-gradient(135deg, var(--ocean-light) 0%, var(--ocean-blue) 100%); /* Blaues Gradient */
+  color: var(--text); /* Textfarbe */
+  text-align: center; /* Text zentriert */
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18); /* Schatteneffekt */
+  border: 1px solid rgba(255,255,255,0.08); /* Grenze */
 }
+
+/* Hero Überschrift */
 .hero h1 { 
-  font-size: 3.4rem; 
-  margin-bottom: 0.75rem; 
-  color: var(--text); 
+  font-size: 3.4rem; /* Große Schriftgröße */
+  margin-bottom: 0.75rem; /* Untenpaddung */
+  color: var(--text); /* Textfarbe */
 }
 
+/* Hero Beschreibungstext */
 .hero p { 
-  font-size: 1.15rem; 
-  color: var(--muted); 
-  line-height: 1.6; 
+  font-size: 1.15rem; /* Schriftgröße */
+  color: var(--muted); /* Gedämpfte Farbe */
+  line-height: 1.6; /* Zeilenabstand */
 }
 
 
@@ -133,38 +142,45 @@ body[data-theme="dark"] .navbar-toggler-icon {
 
 
 
-/* Feature chips */
+/* Feature Chips - kleine Eigenschafts-Tags */
 .feature-strip { 
-  max-width: 1200px; 
-  margin: -1rem auto 2.5rem; 
-  display: flex; 
-  flex-wrap: wrap;
-   gap: 0.8rem; 
-   justify-content: center; 
+  max-width: 1200px; /* Maximale Breite */
+  margin: -1rem auto 2.5rem; /* Außenpaddung */
+  display: flex; /* Flexbox Layout */
+  flex-wrap: wrap; /* Elemente umbrechen */
+  gap: 0.8rem; /* Abstand zwischen Elementen */
+  justify-content: center; /* Zentriert */
 }
 
+/* Feature Chip - einzelner Tag */
 .feature-chip { 
-  padding: 0.65rem 1rem; 
-  border-radius: 12px; 
-  background: rgba(255,255,255,0.8); 
-  color: var(--text-dark); 
-  font-weight: 700; 
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1); 
-  border: 1px solid rgba(0,0,0,0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  padding: 0.65rem 1rem; /* Innenpaddung */
+  border-radius: 12px; /* Abgerundete Ecken */
+  background: rgba(255,255,255,0.8); /* Transparenter weißer Hintergrund */
+  color: var(--text-dark); /* Textfarbe */
+  font-weight: 700; /* Fetter Text */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Schatteneffekt */
+  border: 1px solid rgba(0,0,0,0.04); /* Feine Grenze */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Animationen */
 }
+
+/* Feature Chip - Hover Effekt */
 .feature-chip:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  background: rgba(255, 217, 61, 0.9);
+  transform: translateY(-3px); /* Nach oben bewegen */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Verstärkter Schatten */
+  background: rgba(255, 217, 61, 0.9); /* Gelblicher Hintergrund */
 }
+
+/* Feature Chip Dark Mode */
 body[data-theme="dark"] .feature-chip { 
-  background: rgba(255,255,255,0.12); 
-  color: var(--text); 
-  border-color: rgba(255,255,255,0.08); 
+  background: rgba(255,255,255,0.12); /* Transparenter Hintergrund dunkel */
+  color: var(--text); /* Textfarbe dunkel */
+  border-color: rgba(255,255,255,0.08); /* Grenzenfarbe dunkel */
 }
+
+/* Feature Chip Dark Mode - Hover */
 body[data-theme="dark"] .feature-chip:hover {
-  background: rgba(255, 217, 61, 0.2);
+  background: rgba(255, 217, 61, 0.2); /* Gelblicher Hintergrund dunkel */
 }
 
 
@@ -180,60 +196,67 @@ body[data-theme="dark"] .feature-chip:hover {
 
 
 
-/* carosell */
+/* Carousel - Bildkarussell */
 .carousel { 
-  max-width: 1200px; 
-  margin: 2rem auto; 
-  position: relative; 
-  overflow: hidden; 
-  border-radius: 18px;
-  box-shadow: 0 18px 36px rgba(0,0,0,0.18); 
+  max-width: 1200px; /* Maximale Breite */
+  margin: 2rem auto; /* Außenpaddung */
+  position: relative; /* Relative Positionierung */
+  overflow: hidden; /* Überfluss verstecken */
+  border-radius: 18px; /* Abgerundete Ecken */
+  box-shadow: 0 18px 36px rgba(0,0,0,0.18); /* Schatteneffekt */
 }
 
+/* Carousel innerer Container */
 .carousel-inner { 
-  display: flex; 
-  transition: transform 0.5s ease; 
+  display: flex; /* Flexbox Layout */
+  transition: transform 0.5s ease; /* Transitions-Animation */
 }
 
+/* Carousel einzelnes Element */
 .carousel-item { 
-  min-width: 100%; 
-  position: relative; 
+  min-width: 100%; /* Minimale Breite */
+  position: relative; /* Relative Positionierung */
 }
 
+/* Carousel Bild */
 .carousel-item img { 
-  width: 100%; 
-  height: 500px; 
-  object-fit: cover; 
+  width: 100%; /* Volle Breite */
+  height: 500px; /* Feste Höhe */
+  object-fit: cover; /* Bild ausfüllen */
 }
 
+/* Carousel Caption - Bildunterschrift */
 .carousel-caption { 
-position: absolute;
-bottom: 20px;
-left: 20px;
-background: rgba(0,0,0,0.6);
-color: white; 
-padding: 1rem 1.5rem; 
-border-radius: 14px; 
+position: absolute; /* Absolute Positionierung */
+bottom: 20px; /* Position von unten */
+left: 20px; /* Position von links */
+background: rgba(0,0,0,0.6); /* Schwarzer Hintergrund */
+color: white; /* Weiße Textfarbe */
+padding: 1rem 1.5rem; /* Innenpaddung */
+border-radius: 14px; /* Abgerundete Ecken */
 }
 
+/* Carousel Steuerelemente */
 .carousel-controls { 
-  display: flex; 
-  justify-content: center; 
-  gap: 1rem;
-  margin-top: 1rem; 
+  display: flex; /* Flexbox Layout */
+  justify-content: center; /* Zentriert */
+  gap: 1rem; /* Abstand zwischen Buttons */
+  margin-top: 1rem; /* Obenpaddung */
 }
 
+/* Carousel Button */
 .carousel-btn { 
-  width: 15px; 
-  height: 15px; 
-  border-radius: 50%; 
-  background: var(--text); 
-  border: none; 
-  cursor: pointer; 
+  width: 15px; /* Breite */
+  height: 15px; /* Höhe */
+  border-radius: 50%; /* Kreis Form */
+  background: var(--text); /* Textfarbe als Hintergrund */
+  border: none; /* Keine Grenze */
+  cursor: pointer; /* Mauszeiger */
 }
 
+/* Carousel Button - aktiv */
 .carousel-btn.active { 
-  background: var(--accent); 
+  background: var(--accent); /* Akzentfarbe */
 }
 
 
@@ -247,22 +270,23 @@ border-radius: 14px;
 
 
 
-/* Sections */
+/* Sections - Inhaltssektionen */
 .section { 
-  max-width: 1200px; 
-  margin: 3rem auto; 
-  padding: 2rem; 
-  background: var(--surface); 
-  border-radius: 18px; 
-  box-shadow: 0 14px 35px rgba(0,0,0,0.12); 
-  border: 1px solid rgba(255,255,255,0.06); 
+  max-width: 1200px; /* Maximale Breite */
+  margin: 3rem auto; /* Außenpaddung */
+  padding: 2rem; /* Innenpaddung */
+  background: var(--surface); /* Oberflächenfarbe */
+  border-radius: 18px; /* Abgerundete Ecken */
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12); /* Schatteneffekt */
+  border: 1px solid rgba(255,255,255,0.06); /* Feine Grenze */
 }
 
+/* Section Überschrift */
 .section h2 { 
-  color: var(--text); 
-  margin-bottom: 1.5rem; 
-  font-size: 2rem; 
-  text-align: center; 
+  color: var(--text); /* Textfarbe */
+  margin-bottom: 1.5rem; /* Untenpaddung */
+  font-size: 2rem; /* Schriftgröße */
+  text-align: center; /* Text zentriert */
 }
 
 
@@ -275,37 +299,45 @@ border-radius: 14px;
 
 
 
-/* Cards */
+/* Cards Grid - Gitterlayout für Karten */
 .cards-grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 2rem; 
-  margin-top: 2rem; 
+  display: grid; /* CSS Grid Layout */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive Spalten */
+  gap: 2rem; /* Abstand zwischen Karten */
+  margin-top: 2rem; /* Obenpaddung */
 }
+
+/* Card - einzelne Karte */
 .card { 
-  background: var(--surface-strong); 
-  border-radius: 16px; 
-  overflow: hidden; 
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--surface-strong); /* Hintergrundfarbe */
+  border-radius: 16px; /* Abgerundete Ecken */
+  overflow: hidden; /* Überfluss verstecken */
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12); /* Schatteneffekt */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
 }
+
+/* Card - Hover Effekt */
 .card:hover { 
-  transform: translateY(-8px); 
-  box-shadow: 0 16px 32px rgba(0,0,0,0.16); 
+  transform: translateY(-8px); /* Nach oben bewegen */
+  box-shadow: 0 16px 32px rgba(0,0,0,0.16); /* Verstärkter Schatten */
 }
+
+/* Card Bild */
 .card img { 
-  width: 100%; 
-  height: 200px; 
-  object-fit: cover; 
+  width: 100%; /* Volle Breite */
+  height: 200px; /* Feste Höhe */
+  object-fit: cover; /* Bild ausfüllen */
 }
 
+/* Card Inhalt */
 .card-content { 
-  padding: 1.5rem; 
+  padding: 1.5rem; /* Innenpaddung */
 }
 
+/* Card Überschrift */
 .card-content h3 { 
-  color: var(--text); 
-  margin-bottom: 0.5rem; 
+  color: var(--text); /* Textfarbe */
+  margin-bottom: 0.5rem; /* Untenpaddung */
 }
 
 
@@ -319,61 +351,69 @@ border-radius: 14px;
 
 
 
-/* Side panel (Das auf der rechten seite) */
+/* Side Panel Overlay - Dunkler Hintergrund */
 .side-overlay { 
-  display: none; 
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-  background: rgba(0,0,0,0.5); 
-  z-index: 999; 
+  display: none; /* Ausgeblendet */
+  position: fixed; /* Feste Positionierung */
+  top: 0; /* Oben positioniert */
+  left: 0; /* Links positioniert */
+  width: 100%; /* Volle Breite */
+  height: 100%; /* Volle Höhe */
+  background: rgba(0,0,0,0.5); /* Halbdurchsichtiger schwarz */
+  z-index: 999; /* Höhe der Ebene */
 }
 
+/* Side Panel Overlay - aktiv */
 .side-overlay.active { 
-  display: block; 
+  display: block; /* Angezeigt */
 }
+
+/* Side Panel - seitliches Menü */
 .side-panel { 
-  position: fixed; 
-  top: 0; 
-  right: -400px; 
-  width: 400px; 
-  height: 100%; 
-  background: var(--surface-strong); 
-  box-shadow: -4px 0 12px rgba(0,0,0,0.25); 
-  transition: right 0.3s ease; 
-  z-index: 1000; 
-  overflow-y: auto; 
-  padding: 2rem; 
-  color: var(--text); 
+  position: fixed; /* Feste Positionierung */
+  top: 0; /* Oben positioniert */
+  right: -400px; /* Anfangs außerhalb des Bildschirms */
+  width: 400px; /* Breite */
+  height: 100%; /* Volle Höhe */
+  background: var(--surface-strong); /* Hintergrundfarbe */
+  box-shadow: -4px 0 12px rgba(0,0,0,0.25); /* Schatteneffekt */
+  transition: right 0.3s ease; /* Transitions-Animation */
+  z-index: 1000; /* Höhe der Ebene */
+  overflow-y: auto; /* Vertikaler Scroll */
+  padding: 2rem; /* Innenpaddung */
+  color: var(--text); /* Textfarbe */
 }
 
+/* Side Panel - aktiv */
 .side-panel.active { 
-  right: 0; 
+  right: 0; /* In den Bildschirm schieben */
 }
+
+/* Side Panel Close Button */
 .side-close { 
-  position: absolute; 
-  top: 1rem; 
-  right: 1rem; 
-  background: var(--accent); 
-  color: white; 
-  border: none; 
-  width: 35px; 
-  height: 35px; 
-  border-radius: 50%; 
-  cursor: pointer; 
-  font-size: 1.5rem; 
+  position: absolute; /* Absolute Positionierung */
+  top: 1rem; /* Oben positioniert */
+  right: 1rem; /* Rechts positioniert */
+  background: var(--accent); /* Akzentfarbe */
+  color: white; /* Weiße Textfarbe */
+  border: none; /* Keine Grenze */
+  width: 35px; /* Breite */
+  height: 35px; /* Höhe */
+  border-radius: 50%; /* Kreis Form */
+  cursor: pointer; /* Mauszeiger */
+  font-size: 1.5rem; /* Schriftgröße */
 }
 
+/* Side Panel Überschrift */
 .side-panel h2 { 
-  color: var(--text); 
-  margin-bottom: 0.75rem; 
+  color: var(--text); /* Textfarbe */
+  margin-bottom: 0.75rem; /* Untenpaddung */
 }
 
+/* Side Panel Paragraph */
 .side-panel p { 
-  color: var(--muted); 
-  line-height: 1.5; 
+  color: var(--muted); /* Gedämpfte Farbe */
+  line-height: 1.5; /* Zeilenabstand */
 }
 
 
@@ -385,69 +425,85 @@ border-radius: 14px;
 
 
 
-/* Buttons */
+/* Buttons - Schaltflächen */
+
+/* Offcanvas Button - seitlicher Panel Button */
 .offcanvas-btn { 
-  background: linear-gradient(120deg, #ff8f70, #ff3d54); 
-  color: #0b0b0b; 
-  border: 1px solid rgba(0,0,0,0.08); 
-  padding: 0.7rem 1.5rem; 
-  border-radius: 999px; 
-  cursor: pointer; 
-  font-weight: 800; 
-  font-size: 1rem; 
-  box-shadow: 0 12px 22px rgba(0,0,0,0.18), 0 0 0 1px rgba(255,255,255,0.45) inset;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(120deg, #ff8f70, #ff3d54); /* Rotes Gradient */
+  color: #0b0b0b; /* Dunkle Textfarbe */
+  border: 1px solid rgba(0,0,0,0.08); /* Feine Grenze */
+  padding: 0.7rem 1.5rem; /* Innenpaddung */
+  border-radius: 999px; /* Vollständig abgerundete Ecken */
+  cursor: pointer; /* Mauszeiger */
+  font-weight: 800; /* Sehr fetter Text */
+  font-size: 1rem; /* Schriftgröße */
+  box-shadow: 0 12px 22px rgba(0,0,0,0.18), 0 0 0 1px rgba(255,255,255,0.45) inset; /* Schatteneffekt */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
 }
+
+/* Offcanvas Button - Hover */
 .offcanvas-btn:hover { 
-  transform: translateY(-2px); 
-  box-shadow: 0 14px 24px rgba(0,0,0,0.22); 
+  transform: translateY(-2px); /* Nach oben bewegen */
+  box-shadow: 0 14px 24px rgba(0,0,0,0.22); /* Verstärkter Schatten */
 }
+
+/* Primary Button - Hauptschaltfläche */
 .btn-primary { 
-  display: inline-flex; 
-  align-items: center; 
-  gap: 0.4rem; 
-  padding: 0.75rem 1.2rem; 
-  border-radius: 12px; 
-  background: linear-gradient(120deg, var(--sponge-yellow), var(--sponge-blue)); 
-  color: var(--text-dark); 
-  font-weight: 800; 
-  text-decoration: none; 
-  box-shadow: 0 10px 18px rgba(0,0,0,0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-flex; /* Inline Flexbox */
+  align-items: center; /* Vertikal zentriert */
+  gap: 0.4rem; /* Abstand zu Icon */
+  padding: 0.75rem 1.2rem; /* Innenpaddung */
+  border-radius: 12px; /* Abgerundete Ecken */
+  background: linear-gradient(120deg, var(--sponge-yellow), var(--sponge-blue)); /* Gelb-Grün Gradient */
+  color: var(--text-dark); /* Dunkle Textfarbe */
+  font-weight: 800; /* Sehr fetter Text */
+  text-decoration: none; /* Keine Unterstreichung */
+  box-shadow: 0 10px 18px rgba(0,0,0,0.12); /* Schatteneffekt */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
 }
+
+/* Primary Button - Hover */
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  transform: translateY(-2px); /* Nach oben bewegen */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2); /* Verstärkter Schatten */
 }
+
+/* Ghost Button - transparente Schaltfläche */
 .btn-ghost { 
-  display: inline-flex; 
-  align-items: center; 
-  gap: 0.4rem; 
-  padding: 0.75rem 1.2rem; 
-  border-radius: 12px; 
-  border: 1px solid rgba(0,0,0,0.08); 
-  color: var(--text); 
-  background: transparent; 
-  text-decoration: none; 
-  font-weight: 700;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: inline-flex; /* Inline Flexbox */
+  align-items: center; /* Vertikal zentriert */
+  gap: 0.4rem; /* Abstand zu Icon */
+  padding: 0.75rem 1.2rem; /* Innenpaddung */
+  border-radius: 12px; /* Abgerundete Ecken */
+  border: 1px solid rgba(0,0,0,0.08); /* Feine Grenze */
+  color: var(--text); /* Textfarbe */
+  background: transparent; /* Transparent */
+  text-decoration: none; /* Keine Unterstreichung */
+  font-weight: 700; /* Fetter Text */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Animationen */
 }
+
+/* Ghost Button - Hover */
 .btn-ghost:hover {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px); /* Nach oben bewegen */
+  background: rgba(255, 255, 255, 0.1); /* Halbdurchsichtiger weißer Hintergrund */
 }
+
+/* Ghost Button Dark Mode */
 body[data-theme="dark"] .btn-ghost { 
-  border-color: rgba(255,255,255,0.18); 
+  border-color: rgba(255,255,255,0.18); /* Grenzenfarbe dunkel */
 }
 
+/* Divider - Trennlinie */
 .divider { 
-  height: 1px; 
-  margin: 1.8rem 0; 
-  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.12), transparent); 
+  height: 1px; /* Höhe einer Linie */
+  margin: 1.8rem 0; /* Außenpaddung */
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.12), transparent); /* Gradient Linie */
 }
 
+/* Divider Dark Mode */
 body[data-theme="dark"] .divider { 
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent); 
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent); /* Gradient Linie dunkel */
 }
 
 
@@ -464,47 +520,54 @@ body[data-theme="dark"] .divider {
 
 
 
-/* Klender */
+/* Calendar - Kalender */
 .calendar { 
-  background: var(--surface-strong); 
-  padding: 1.5rem; 
-  border-radius: 10px; 
-  margin-top: 2rem; 
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12); 
+  background: var(--surface-strong); /* Hintergrundfarbe */
+  padding: 1.5rem; /* Innenpaddung */
+  border-radius: 10px; /* Abgerundete Ecken */
+  margin-top: 2rem; /* Obenpaddung */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12); /* Schatteneffekt */
 }
 
+/* Kalender Kopfzeile */
 .calendar-header { 
-  text-align: center; 
-  margin-bottom: 1rem; 
-  font-size: 1.5rem; 
-  color: var(--text); 
+  text-align: center; /* Text zentriert */
+  margin-bottom: 1rem; /* Untenpaddung */
+  font-size: 1.5rem; /* Schriftgröße */
+  color: var(--text); /* Textfarbe */
 }
 
+/* Kalender Gitterlayout */
 .calendar-grid { 
-  display: grid; 
-  grid-template-columns: repeat(7, 1fr); 
-  gap: 0.5rem; 
+  display: grid; /* CSS Grid Layout */
+  grid-template-columns: repeat(7, 1fr); /* 7 Spalten */
+  gap: 0.5rem; /* Abstand */
 }
 
+/* Kalender Tagesname */
 .calendar-day { 
-  padding: 1rem; 
-  text-align: center; 
-  background: var(--ocean-light); 
-  border-radius: 5px; 
-  font-weight: bold; 
+  padding: 1rem; /* Innenpaddung */
+  text-align: center; /* Text zentriert */
+  background: var(--ocean-light); /* Hintergrundfarbe */
+  border-radius: 5px; /* Abgerundete Ecken */
+  font-weight: bold; /* Fetter Text */
 }
+
+/* Kalender Datum */
 .calendar-date { 
-  padding: 1rem; 
-  text-align: center; 
-  background: var(--surface); 
-  border: 2px solid var(--ocean-light); 
-  border-radius: 5px;
-  transition: all 0.3s ease;
+  padding: 1rem; /* Innenpaddung */
+  text-align: center; /* Text zentriert */
+  background: var(--surface); /* Hintergrundfarbe */
+  border: 2px solid var(--ocean-light); /* Grenze */
+  border-radius: 5px; /* Abgerundete Ecken */
+  transition: all 0.3s ease; /* Animationen */
 }
+
+/* Kalender Datum - Hover */
 .calendar-date:hover { 
-  background: var(--sponge-yellow); 
-  transform: scale(1.05);
-  cursor: pointer; 
+  background: var(--sponge-yellow); /* Gelber Hintergrund */
+  transform: scale(1.05); /* Vergrößern */
+  cursor: pointer; /* Mauszeiger */
 }
 
 
@@ -522,53 +585,62 @@ body[data-theme="dark"] .divider {
 
 
 
-/* Quiz */
+/* Quiz - Quiz Formular */
 .quiz-form { 
-  background: var(--surface-strong); 
-  padding: 2rem; 
-  border-radius: 10px; 
-  margin-top: 1rem; 
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12); 
+  background: var(--surface-strong); /* Hintergrundfarbe */
+  padding: 2rem; /* Innenpaddung */
+  border-radius: 10px; /* Abgerundete Ecken */
+  margin-top: 1rem; /* Obenpaddung */
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12); /* Schatteneffekt */
 }
 
+/* Quiz Frage */
 .quiz-question { 
-  margin-bottom: 2rem; 
-  padding: 1.5rem; 
-  background: var(--surface); 
-  border-radius: 10px; 
+  margin-bottom: 2rem; /* Untenpaddung */
+  padding: 1.5rem; /* Innenpaddung */
+  background: var(--surface); /* Hintergrundfarbe */
+  border-radius: 10px; /* Abgerundete Ecken */
 }
 
+/* Quiz Frage Überschrift */
 .quiz-question h3 { 
-  margin-bottom: 1rem; 
-  color: var(--text); 
+  margin-bottom: 1rem; /* Untenpaddung */
+  color: var(--text); /* Textfarbe */
 }
+
+/* Quiz Antwort-Optionen Label */
 .quiz-options label { 
-  display: block; 
-  padding: 1rem; 
-  background: var(--surface-strong); 
-  border: 2px solid var(--ocean-light); 
-  border-radius: 8px; 
-  cursor: pointer; 
-  margin-bottom: 0.8rem;
-  transition: all 0.3s ease;
+  display: block; /* Block Element */
+  padding: 1rem; /* Innenpaddung */
+  background: var(--surface-strong); /* Hintergrundfarbe */
+  border: 2px solid var(--ocean-light); /* Grenze */
+  border-radius: 8px; /* Abgerundete Ecken */
+  cursor: pointer; /* Mauszeiger */
+  margin-bottom: 0.8rem; /* Untenpaddung */
+  transition: all 0.3s ease; /* Animationen */
 }
+
+/* Quiz Antwort-Optionen Label - Hover */
 .quiz-options label:hover { 
-  background: var(--sponge-yellow); 
-  border-color: var(--ocean-dark);
-  transform: translateX(5px);
+  background: var(--sponge-yellow); /* Gelber Hintergrund */
+  border-color: var(--ocean-dark); /* Dunkle Grenzenfarbe */
+  transform: translateX(5px); /* Nach rechts bewegen */
 }
+
+/* Quiz Radio Button */
 .quiz-options input[type="radio"] { 
-  margin-right: 0.8rem; 
+  margin-right: 0.8rem; /* Rechtspaddung */
 }
 
+/* Quiz Ergebnis */
 .quiz-result { 
-  margin-top: 2rem; 
-  padding: 2rem; 
-  background: var(--sponge-yellow); 
-  border-radius: 10px; 
-  text-align: center; 
-  font-size: 1.5rem; 
-  font-weight: bold; 
+  margin-top: 2rem; /* Obenpaddung */
+  padding: 2rem; /* Innenpaddung */
+  background: var(--sponge-yellow); /* Gelber Hintergrund */
+  border-radius: 10px; /* Abgerundete Ecken */
+  text-align: center; /* Text zentriert */
+  font-size: 1.5rem; /* Schriftgröße */
+  font-weight: bold; /* Fetter Text */
 }
 
 
@@ -587,20 +659,21 @@ body[data-theme="dark"] .divider {
 
 
 
-/* Karte */
+/* Map - Karte Container */
 .map-container { 
-  width: 100%; 
-  height: 450px; 
-  border-radius: 10px; 
-  overflow: hidden; 
-  margin-top: 1.5rem; 
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2); 
+  width: 100%; /* Volle Breite */
+  height: 450px; /* Feste Höhe */
+  border-radius: 10px; /* Abgerundete Ecken */
+  overflow: hidden; /* Überfluss verstecken */
+  margin-top: 1.5rem; /* Obenpaddung */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Schatteneffekt */
 }
 
+/* Karten iFrame */
 .map-container iframe { 
-  width: 100%; 
-  height: 100%; 
-  border: none; 
+  width: 100%; /* Volle Breite */
+  height: 100%; /* Volle Höhe */
+  border: none; /* Keine Grenze */
 }
 
 
@@ -613,32 +686,39 @@ body[data-theme="dark"] .divider {
 
 
 
-/* Info grids */
+/* Info Grid - Informations-Gitterlayout */
 .info-grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 1.5rem; 
+  display: grid; /* CSS Grid Layout */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive Spalten */
+  gap: 1.5rem; /* Abstand */
 }
+
+/* Info Card - Informationskarte */
 .info-card { 
-  background: var(--surface-strong); 
-  border-radius: 12px; 
-  padding: 1.5rem; 
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-  border: 1px solid rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--surface-strong); /* Hintergrundfarbe */
+  border-radius: 12px; /* Abgerundete Ecken */
+  padding: 1.5rem; /* Innenpaddung */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Schatteneffekt */
+  border: 1px solid rgba(0,0,0,0.05); /* Feine Grenze */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
 }
+
+/* Info Card - Hover */
 .info-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transform: translateY(-5px); /* Nach oben bewegen */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Verstärkter Schatten */
 }
+
+/* Info Card Überschrift */
 .info-card h3 { 
-  margin-bottom: 0.75rem; 
-  color: var(--text); 
+  margin-bottom: 0.75rem; /* Untenpaddung */
+  color: var(--text); /* Textfarbe */
 }
 
+/* Info Card Paragraph */
 .info-card p { 
-  color: var(--muted); 
-  line-height: 1.5; 
+  color: var(--muted); /* Gedämpfte Farbe */
+  line-height: 1.5; /* Zeilenabstand */
 }
 
 
@@ -657,46 +737,52 @@ body[data-theme="dark"] .divider {
 
 
 
-/* Daten tabelle */
+/* Data Table - Datentabelle */
 .data-table { 
-  width: 100%; 
-  border-collapse: collapse; 
-  margin-top: 1rem; 
-  background: var(--surface-strong); 
-  border-radius: 12px; 
-  overflow: hidden; 
-  box-shadow: 0 8px 18px rgba(0,0,0,0.1); 
+  width: 100%; /* Volle Breite */
+  border-collapse: collapse; /* Grenzen zusammenfassen */
+  margin-top: 1rem; /* Obenpaddung */
+  background: var(--surface-strong); /* Hintergrundfarbe */
+  border-radius: 12px; /* Abgerundete Ecken */
+  overflow: hidden; /* Überfluss verstecken */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1); /* Schatteneffekt */
 }
 
+/* Tabelle Header */
 .data-table thead th { 
-  background: var(--ocean-dark); 
-  color: #fff; 
-  text-align: left; 
-  padding: 0.9rem 1rem; 
-  font-weight: 800; 
-  letter-spacing: 0.2px; 
+  background: var(--ocean-dark); /* Dunkler Hintergrund */
+  color: #fff; /* Weiße Textfarbe */
+  text-align: left; /* Text links */
+  padding: 0.9rem 1rem; /* Innenpaddung */
+  font-weight: 800; /* Sehr fetter Text */
+  letter-spacing: 0.2px; /* Zeichenabstand */
 }
 
+/* Tabelle Body Zellen */
 .data-table tbody td { 
-  padding: 0.85rem 1rem; 
-  color: var(--text); 
-  border-bottom: 1px solid rgba(0,0,0,0.08); 
+  padding: 0.85rem 1rem; /* Innenpaddung */
+  color: var(--text); /* Textfarbe */
+  border-bottom: 1px solid rgba(0,0,0,0.08); /* Grenzenfarbe */
 }
 
+/* Tabelle Body Dark Mode */
 body[data-theme="dark"] .data-table tbody td { 
-  border-bottom-color: rgba(255,255,255,0.12); 
+  border-bottom-color: rgba(255,255,255,0.12); /* Grenzenfarbe dunkel */
 }
 
+/* Tabelle ungerade Zeilen */
 .data-table tbody tr:nth-child(odd) { 
-  background: var(--surface); 
+  background: var(--surface); /* Alternativ Hintergrundfarbe */
 }
 
+/* Tabelle gerade Zeilen */
 .data-table tbody tr:nth-child(even) { 
-  background: var(--surface-strong); 
+  background: var(--surface-strong); /* Alternativ Hintergrundfarbe */
 }
 
+/* Tabelle Zeilen Hover */
 .data-table tbody tr:hover { 
-  background: rgba(255,255,255,0.12); 
+  background: rgba(255,255,255,0.12); /* Hover Hintergrund */
 }
 
 
@@ -708,62 +794,68 @@ body[data-theme="dark"] .data-table tbody td {
 
 
 
-/* Stat grid */
+/* Stat Grid - Statistik Gitterlayout */
 .stat-grid { 
-display: grid; 
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-gap: 1rem; 
-margin-top: 1.5rem; 
+display: grid; /* CSS Grid Layout */
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive Spalten */
+gap: 1rem; /* Abstand */
+margin-top: 1.5rem; /* Obenpaddung */
 }
 
-
+/* Statistik Karte */
 .stat-card { 
-  background: var(--surface-strong); 
-  border-radius: 14px; 
-  padding: 1.2rem 1.4rem; 
-  box-shadow: 0 8px 18px rgba(0,0,0,0.1); 
-  border: 1px solid rgba(255,255,255,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--surface-strong); /* Hintergrundfarbe */
+  border-radius: 14px; /* Abgerundete Ecken */
+  padding: 1.2rem 1.4rem; /* Innenpaddung */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1); /* Schatteneffekt */
+  border: 1px solid rgba(255,255,255,0.06); /* Feine Grenze */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
 }
 
+/* Statistik Karte Hover */
 .stat-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  transform: translateY(-3px); /* Nach oben bewegen */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* Verstärkter Schatten */
 }
 
+/* Statistik Wert */
 .stat-value { 
-font-size: 1.6rem; 
-font-weight: 800; 
-color: var(--text);
+font-size: 1.6rem; /* Schriftgröße */
+font-weight: 800; /* Sehr fetter Text */
+color: var(--text); /* Textfarbe */
 }
 
+/* Statistik Label */
 .stat-label { 
-margin-top: 0.2rem; 
-color: var(--muted); 
-font-weight: 600; 
-letter-spacing: 0.2px; 
+margin-top: 0.2rem; /* Obenpaddung */
+color: var(--muted); /* Gedämpfte Farbe */
+font-weight: 600; /* Fetter Text */
+letter-spacing: 0.2px; /* Zeichenabstand */
 }
 
+/* Pill Row - Reihe mit Pills */
 .pill-row { 
-display: flex; 
-flex-wrap: wrap;
-gap: 0.6rem; 
-margin-top: 1rem;
+display: flex; /* Flexbox Layout */
+flex-wrap: wrap; /* Elemente umbrechen */
+gap: 0.6rem; /* Abstand */
+margin-top: 1rem; /* Obenpaddung */
 }
 
+/* Pill - kleine Tag */
 .pill { 
-padding: 0.45rem 0.85rem; 
-border-radius: 999px; 
-background: rgba(255,255,255,0.7);
-border: 1px solid rgba(0,0,0,0.05); 
-color: var(--text); 
-font-weight: 700; 
-box-shadow: 0 6px 12px rgba(0,0,0,0.08); 
+padding: 0.45rem 0.85rem; /* Innenpaddung */
+border-radius: 999px; /* Vollständig abgerundete Ecken */
+background: rgba(255,255,255,0.7); /* Transparenter weißer Hintergrund */
+border: 1px solid rgba(0,0,0,0.05); /* Feine Grenze */
+color: var(--text); /* Textfarbe */
+font-weight: 700; /* Fetter Text */
+box-shadow: 0 6px 12px rgba(0,0,0,0.08); /* Schatteneffekt */
 }
 
+/* Pill Dark Mode */
 body[data-theme="dark"] .pill { 
-background: rgba(255,255,255,0.12); 
-border-color: rgba(255,255,255,0.06); 
+background: rgba(255,255,255,0.12); /* Transparenter Hintergrund dunkel */
+border-color: rgba(255,255,255,0.06); /* Grenzenfarbe dunkel */
 }
 
 
@@ -774,119 +866,127 @@ border-color: rgba(255,255,255,0.06);
 
 
 
-/* toggle pill */
+/* Theme Toggle - Design Umschalter (Licht/Dunkel) */
 .theme-toggle { 
-position: relative; 
-display: inline-flex; 
-align-items: center; 
-justify-content: center;
-width: 68px; 
-height: 34px; 
-padding: 0; 
-border-radius: 999px; 
-background: linear-gradient(90deg, var(--sponge-yellow), var(--sponge-blue));
-box-shadow: 0 6px 14px rgba(0,0,0,0.18);
-cursor: pointer; border: 1px solid rgba(255,255,255,0.25); 
+position: relative; /* Relative Positionierung */
+display: inline-flex; /* Inline Flexbox */
+align-items: center; /* Vertikal zentriert */
+justify-content: center; /* Horizontal zentriert */
+width: 68px; /* Breite */
+height: 34px; /* Höhe */
+padding: 0; /* Keine Innenpaddung */
+border-radius: 999px; /* Vollständig abgerundete Ecken */
+background: linear-gradient(90deg, var(--sponge-yellow), var(--sponge-blue)); /* Gelb-Grün Gradient */
+box-shadow: 0 6px 14px rgba(0,0,0,0.18); /* Schatteneffekt */
+cursor: pointer; /* Mauszeiger */
+border: 1px solid rgba(255,255,255,0.25); /* Grenze */
 }
 
+/* Theme Toggle Input */
 .theme-toggle input { 
-position: absolute; 
-inset: 0; 
-opacity: 0; 
-cursor: pointer; 
+position: absolute; /* Absolute Positionierung */
+inset: 0; /* Alle Positionen auf 0 */
+opacity: 0; /* Unsichtbar */
+cursor: pointer; /* Mauszeiger */
 }
 
+/* Theme Toggle Thumb - beweglicher Kreis */
 .theme-toggle .toggle-thumb { 
-position: absolute; 
-top: 3px; 
-left: 3px;
-width: 28px; 
-height: 28px; 
-border-radius: 50%; 
-background: var(--surface-strong); 
-box-shadow: 0 6px 12px rgba(0,0,0,0.2); 
+position: absolute; /* Absolute Positionierung */
+top: 3px; /* Oben positioniert */
+left: 3px; /* Links positioniert */
+width: 28px; /* Breite */
+height: 28px; /* Höhe */
+border-radius: 50%; /* Kreis Form */
+background: var(--surface-strong); /* Hintergrundfarbe */
+box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Schatteneffekt */
 }
 
+/* Theme Toggle Icons */
 .theme-toggle .icon-sun, .theme-toggle .icon-moon { 
-position: absolute; 
-font-size: 14px; 
-color: var(--text-dark); 
+position: absolute; /* Absolute Positionierung */
+font-size: 14px; /* Schriftgröße */
+color: var(--text-dark); /* Textfarbe */
 }
 
-
+/* Theme Toggle Sonne Icon */
 .theme-toggle .icon-sun { 
-  left: 10px; 
+  left: 10px; /* Links positioniert */
 }
 
+/* Theme Toggle Mond Icon */
 .theme-toggle .icon-moon {
-right: 10px;
+right: 10px; /* Rechts positioniert */
 }
 
+/* Theme Toggle Input - aktiviert */
 .theme-toggle input:checked + .toggle-thumb { 
-transform: translateX(34px); 
-background: var(--surface); 
+transform: translateX(34px); /* Nach rechts bewegen */
+background: var(--surface); /* Hintergrundfarbe */
 }
 
 
 
 
 
-/* Footer */
+/* Footer - Fußzeile */
 footer { 
-  background: var(--ocean-dark); 
-  color: white; 
-  text-align: center; 
-  padding: 2rem; 
-  margin-top: 3rem; 
+  background: var(--ocean-dark); /* Dunkler Hintergrund */
+  color: white; /* Weiße Textfarbe */
+  text-align: center; /* Text zentriert */
+  padding: 2rem; /* Innenpaddung */
+  margin-top: 3rem; /* Obenpaddung */
 }
 
-
-
-
-
-/* Responsive */
+/* Responsive Design - Mobile Ansicht */
 @media (max-width: 768px) {
+  /* Navbar mobile */
   .custom-nav { 
-    border-radius: 12px; 
-    padding: 0.75rem 1rem; 
+    border-radius: 12px; /* Kleinere abgerundete Ecken */
+    padding: 0.75rem 1rem; /* Kleinere Innenpaddung */
   }
   
+  /* Hero Überschrift mobile */
   .hero h1 { 
-    font-size: 2.2rem; 
+    font-size: 2.2rem; /* Kleinere Schriftgröße */
   }
   
+  /* Cards Grid mobile */
   .cards-grid { 
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr; /* Eine Spalte */
   }
   
+  /* Split Layout mobile */
   .layout-split { 
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr; /* Eine Spalte */
   }
   
+  /* Side Panel mobile */
   .side-panel { 
-    width: 100%; 
-    right: -100%; 
+    width: 100%; /* Volle Breite */
+    right: -100%; /* Außerhalb des Bildschirms */
   }
 }
 
-
-
-/* animation */
+/* Animationen */
+/* Section Animation */
 .section {
-  animation: fadeIn 0.8s ease-out;
+  animation: fadeIn 0.8s ease-out; /* Einblend-Animation */
 }
 
+/* Hero Überschrift Animation */
 .hero h1 {
-  animation: slideInLeft 0.8s ease-out;
+  animation: slideInLeft 0.8s ease-out; /* Eingleit-Animation von links */
 }
 
+/* Video Container Animation */
 .video-container {
-  animation: fadeIn 1s ease-out;
-  max-width: 1200px;
-  margin: 2rem auto;
+  animation: fadeIn 1s ease-out; /* Einblend-Animation */
+  max-width: 1200px; /* Maximale Breite */
+  margin: 2rem auto; /* Außenpaddung */
 }
 
-/* Smooth scroll */
+/* Smooth Scroll - sanftes Scrollen */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Sanftes Scroll-Verhalten */
 }
