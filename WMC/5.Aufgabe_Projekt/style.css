@@ -16,7 +16,7 @@
 }
 
 /* Farbvariablen - Farben im Dunkelmodus */
-body[data-theme="dark"] {
+body:has(#themeToggle:checked) {
   --sponge-yellow: #F4C534; /* Gelbe Primärfarbe dunkel */
   --sponge-blue: #4AAE73; /* Grüne Sekundärfarbe dunkel */
   --ocean-light: #22303C; /* Helles Blau dunkel */
@@ -84,7 +84,7 @@ body {
 }
 
 /* Navbar Toggler Dark Mode */
-body[data-theme="dark"] .navbar-toggler { 
+body:has(#themeToggle:checked) .navbar-toggler { 
   border-color: rgba(255,255,255,0.35); /* Grenzenfarbe im Dunkelmodus */
 }
 
@@ -97,7 +97,7 @@ body[data-theme="dark"] .navbar-toggler {
 }
 
 /* Hamburger Icon Dark Mode */
-body[data-theme="dark"] .navbar-toggler-icon {
+body:has(#themeToggle:checked) .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.85)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Hamburger SVG dunkel */
 }
 
@@ -172,14 +172,14 @@ body[data-theme="dark"] .navbar-toggler-icon {
 }
 
 /* Feature Chip Dark Mode */
-body[data-theme="dark"] .feature-chip { 
+body:has(#themeToggle:checked) .feature-chip { 
   background: rgba(255,255,255,0.12); /* Transparenter Hintergrund dunkel */
   color: var(--text); /* Textfarbe dunkel */
   border-color: rgba(255,255,255,0.08); /* Grenzenfarbe dunkel */
 }
 
 /* Feature Chip Dark Mode - Hover */
-body[data-theme="dark"] .feature-chip:hover {
+body:has(#themeToggle:checked) .feature-chip:hover {
   background: rgba(255, 217, 61, 0.2); /* Gelblicher Hintergrund dunkel */
 }
 
@@ -490,7 +490,7 @@ border-radius: 14px; /* Abgerundete Ecken */
 }
 
 /* Ghost Button Dark Mode */
-body[data-theme="dark"] .btn-ghost { 
+body:has(#themeToggle:checked) .btn-ghost { 
   border-color: rgba(255,255,255,0.18); /* Grenzenfarbe dunkel */
 }
 
@@ -502,7 +502,7 @@ body[data-theme="dark"] .btn-ghost {
 }
 
 /* Divider Dark Mode */
-body[data-theme="dark"] .divider { 
+body:has(#themeToggle:checked) .divider { 
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent); /* Gradient Linie dunkel */
 }
 
@@ -766,7 +766,7 @@ body[data-theme="dark"] .divider {
 }
 
 /* Tabelle Body Dark Mode */
-body[data-theme="dark"] .data-table tbody td { 
+body:has(#themeToggle:checked) .data-table tbody td { 
   border-bottom-color: rgba(255,255,255,0.12); /* Grenzenfarbe dunkel */
 }
 
@@ -853,7 +853,7 @@ box-shadow: 0 6px 12px rgba(0,0,0,0.08); /* Schatteneffekt */
 }
 
 /* Pill Dark Mode */
-body[data-theme="dark"] .pill { 
+body:has(#themeToggle:checked) .pill { 
 background: rgba(255,255,255,0.12); /* Transparenter Hintergrund dunkel */
 border-color: rgba(255,255,255,0.06); /* Grenzenfarbe dunkel */
 }
