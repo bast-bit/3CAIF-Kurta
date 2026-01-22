@@ -106,6 +106,279 @@ body:has(#themeToggle:checked) .navbar-toggler-icon {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Side Panel Overlay - Dunkler Hintergrund */
+.side-overlay { 
+  display: none; /* Ausgeblendet */
+  position: fixed; /* Feste Positionierung */
+  top: 0; /* Oben positioniert */
+  left: 0; /* Links positioniert */
+  width: 100%; /* Volle Breite */
+  height: 100%; /* Volle Höhe */
+  background: rgba(0,0,0,0.5); /* Halbdurchsichtiger schwarz */
+  z-index: 999; /* Höhe der Ebene */
+}
+
+/* Side Panel Overlay - aktiv */
+.side-overlay.active { 
+  display: block; /* Angezeigt */
+}
+
+/* Side Panel - seitliches Menü */
+.side-panel { 
+  position: fixed; /* Feste Positionierung */
+  top: 0; /* Oben positioniert */
+  right: -400px; /* Anfangs außerhalb des Bildschirms */
+  width: 400px; /* Breite */
+  height: 100%; /* Volle Höhe */
+  background: var(--surface-strong); /* Hintergrundfarbe */
+  box-shadow: -4px 0 12px rgba(0,0,0,0.25); /* Schatteneffekt */
+  transition: right 0.3s ease; /* Transitions-Animation */
+  z-index: 1000; /* Höhe der Ebene */
+  overflow-y: auto; /* Vertikaler Scroll */
+  padding: 2rem; /* Innenpaddung */
+  color: var(--text); /* Textfarbe */
+}
+
+/* Side Panel - aktiv */
+.side-panel.active { 
+  right: 0; /* In den Bildschirm schieben */
+}
+
+/* Side Panel Close Button */
+.side-close { 
+  position: absolute; /* Absolute Positionierung */
+  top: 1rem; /* Oben positioniert */
+  right: 1rem; /* Rechts positioniert */
+  background: var(--accent); /* Akzentfarbe */
+  color: white; /* Weiße Textfarbe */
+  border: none; /* Keine Grenze */
+  width: 35px; /* Breite */
+  height: 35px; /* Höhe */
+  border-radius: 50%; /* Kreis Form */
+  cursor: pointer; /* Mauszeiger */
+  font-size: 1.5rem; /* Schriftgröße */
+}
+
+/* Side Panel Überschrift */
+.side-panel h2 { 
+  color: var(--text); /* Textfarbe */
+  margin-bottom: 0.75rem; /* Untenpaddung */
+}
+
+/* Side Panel Paragraph */
+.side-panel p { 
+  color: var(--muted); /* Gedämpfte Farbe */
+  line-height: 1.5; /* Zeilenabstand */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Buttons - Schaltflächen */
+
+/* Offcanvas Button - seitlicher Panel Button */
+.offcanvas-btn { 
+  background: linear-gradient(120deg, #ff8f70, #ff3d54); /* Rotes Gradient */
+  color: #0b0b0b; /* Dunkle Textfarbe */
+  border: 1px solid rgba(0,0,0,0.08); /* Feine Grenze */
+  padding: 0.7rem 1.5rem; /* Innenpaddung */
+  border-radius: 999px; /* Vollständig abgerundete Ecken */
+  cursor: pointer; /* Mauszeiger */
+  font-weight: 800; /* Sehr fetter Text */
+  font-size: 1rem; /* Schriftgröße */
+  box-shadow: 0 12px 22px rgba(0,0,0,0.18), 0 0 0 1px rgba(255,255,255,0.45) inset; /* Schatteneffekt */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
+}
+
+/* Offcanvas Button - Hover */
+.offcanvas-btn:hover { 
+  transform: translateY(-2px); /* Nach oben bewegen */
+  box-shadow: 0 14px 24px rgba(0,0,0,0.22); /* Verstärkter Schatten */
+}
+
+/* Primary Button - Hauptschaltfläche */
+.btn-primary { 
+  display: inline-flex; /* Inline Flexbox */
+  align-items: center; /* Vertikal zentriert */
+  gap: 0.4rem; /* Abstand zu Icon */
+  padding: 0.75rem 1.2rem; /* Innenpaddung */
+  border-radius: 12px; /* Abgerundete Ecken */
+  background: linear-gradient(120deg, var(--sponge-yellow), var(--sponge-blue)); /* Gelb-Grün Gradient */
+  color: var(--text-dark); /* Dunkle Textfarbe */
+  font-weight: 800; /* Sehr fetter Text */
+  text-decoration: none; /* Keine Unterstreichung */
+  box-shadow: 0 10px 18px rgba(0,0,0,0.12); /* Schatteneffekt */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
+}
+
+/* Primary Button - Hover */
+.btn-primary:hover {
+  transform: translateY(-2px); /* Nach oben bewegen */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2); /* Verstärkter Schatten */
+}
+
+/* Ghost Button - transparente Schaltfläche */
+.btn-ghost { 
+  display: inline-flex; /* Inline Flexbox */
+  align-items: center; /* Vertikal zentriert */
+  gap: 0.4rem; /* Abstand zu Icon */
+  padding: 0.75rem 1.2rem; /* Innenpaddung */
+  border-radius: 12px; /* Abgerundete Ecken */
+  border: 1px solid rgba(0,0,0,0.08); /* Feine Grenze */
+  color: var(--text); /* Textfarbe */
+  background: transparent; /* Transparent */
+  text-decoration: none; /* Keine Unterstreichung */
+  font-weight: 700; /* Fetter Text */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Animationen */
+}
+
+/* Ghost Button - Hover */
+.btn-ghost:hover {
+  transform: translateY(-2px); /* Nach oben bewegen */
+  background: rgba(255, 255, 255, 0.1); /* Halbdurchsichtiger weißer Hintergrund */
+}
+
+/* Ghost Button Dark Mode */
+body:has(#themeToggle:checked) .btn-ghost { 
+  border-color: rgba(255,255,255,0.18); /* Grenzenfarbe dunkel */
+}
+
+/* Divider - Trennlinie */
+.divider { 
+  height: 1px; /* Höhe einer Linie */
+  margin: 1.8rem 0; /* Außenpaddung */
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.12), transparent); /* Gradient Linie */
+}
+
+/* Divider Dark Mode */
+body:has(#themeToggle:checked) .divider { 
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent); /* Gradient Linie dunkel */
+}
+
+
+
+
+
+
+
+
+/* Theme Toggle - Design Umschalter (Licht/Dunkel) */
+.theme-toggle { 
+position: relative; /* Relative Positionierung */
+display: inline-flex; /* Inline Flexbox */
+align-items: center; /* Vertikal zentriert */
+justify-content: center; /* Horizontal zentriert */
+width: 68px; /* Breite */
+height: 34px; /* Höhe */
+padding: 0; /* Keine Innenpaddung */
+border-radius: 999px; /* Vollständig abgerundete Ecken */
+background: linear-gradient(90deg, var(--sponge-yellow), var(--sponge-blue)); /* Gelb-Grün Gradient */
+box-shadow: 0 6px 14px rgba(0,0,0,0.18); /* Schatteneffekt */
+cursor: pointer; /* Mauszeiger */
+border: 1px solid rgba(255,255,255,0.25); /* Grenze */
+}
+
+/* Theme Toggle Input */
+.theme-toggle input { 
+position: absolute; /* Absolute Positionierung */
+inset: 0; /* Alle Positionen auf 0 */
+opacity: 0; /* Unsichtbar */
+cursor: pointer; /* Mauszeiger */
+}
+
+/* Theme Toggle Thumb - beweglicher Kreis */
+.theme-toggle .toggle-thumb { 
+position: absolute; /* Absolute Positionierung */
+top: 3px; /* Oben positioniert */
+left: 3px; /* Links positioniert */
+width: 28px; /* Breite */
+height: 28px; /* Höhe */
+border-radius: 50%; /* Kreis Form */
+background: var(--surface-strong); /* Hintergrundfarbe */
+box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Schatteneffekt */
+}
+
+/* Theme Toggle Icons */
+.theme-toggle .icon-sun, .theme-toggle .icon-moon { 
+position: absolute; /* Absolute Positionierung */
+font-size: 14px; /* Schriftgröße */
+color: var(--text-dark); /* Textfarbe */
+}
+
+/* Theme Toggle Sonne Icon */
+.theme-toggle .icon-sun { 
+  left: 10px; /* Links positioniert */
+}
+
+/* Theme Toggle Mond Icon */
+.theme-toggle .icon-moon {
+right: 10px; /* Rechts positioniert */
+}
+
+/* Theme Toggle Input - aktiviert */
+.theme-toggle input:checked + .toggle-thumb { 
+transform: translateX(34px); /* Nach rechts bewegen */
+background: var(--surface); /* Hintergrundfarbe */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Hero Section - Großer Banner oben */
 .hero {
   max-width: 1200px; /* Maximale Breite */
@@ -244,20 +517,6 @@ border-radius: 14px; /* Abgerundete Ecken */
   margin-top: 1rem; /* Obenpaddung */
 }
 
-/* Carousel Button */
-.carousel-btn { 
-  width: 15px; /* Breite */
-  height: 15px; /* Höhe */
-  border-radius: 50%; /* Kreis Form */
-  background: var(--text); /* Textfarbe als Hintergrund */
-  border: none; /* Keine Grenze */
-  cursor: pointer; /* Mauszeiger */
-}
-
-/* Carousel Button - aktiv */
-.carousel-btn.active { 
-  background: var(--accent); /* Akzentfarbe */
-}
 
 
 
@@ -288,6 +547,105 @@ border-radius: 14px; /* Abgerundete Ecken */
   font-size: 2rem; /* Schriftgröße */
   text-align: center; /* Text zentriert */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Stat Grid - Statistik Gitterlayout */
+.stat-grid { 
+display: grid; /* CSS Grid Layout */
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive Spalten */
+gap: 1rem; /* Abstand */
+margin-top: 1.5rem; /* Obenpaddung */
+}
+
+/* Statistik Karte */
+.stat-card { 
+  background: var(--surface-strong); /* Hintergrundfarbe */
+  border-radius: 14px; /* Abgerundete Ecken */
+  padding: 1.2rem 1.4rem; /* Innenpaddung */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1); /* Schatteneffekt */
+  border: 1px solid rgba(255,255,255,0.06); /* Feine Grenze */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
+}
+
+/* Statistik Karte Hover */
+.stat-card:hover {
+  transform: translateY(-3px); /* Nach oben bewegen */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* Verstärkter Schatten */
+}
+
+/* Statistik Wert */
+.stat-value { 
+font-size: 1.6rem; /* Schriftgröße */
+font-weight: 800; /* Sehr fetter Text */
+color: var(--text); /* Textfarbe */
+}
+
+/* Statistik Label */
+.stat-label { 
+margin-top: 0.2rem; /* Obenpaddung */
+color: var(--muted); /* Gedämpfte Farbe */
+font-weight: 600; /* Fetter Text */
+letter-spacing: 0.2px; /* Zeichenabstand */
+}
+
+/* Pill Row - Reihe mit Pills */
+.pill-row { 
+display: flex; /* Flexbox Layout */
+flex-wrap: wrap; /* Elemente umbrechen */
+gap: 0.6rem; /* Abstand */
+margin-top: 1rem; /* Obenpaddung */
+}
+
+/* Pill - kleine Tag */
+.pill { 
+padding: 0.45rem 0.85rem; /* Innenpaddung */
+border-radius: 999px; /* Vollständig abgerundete Ecken */
+background: rgba(255,255,255,0.7); /* Transparenter weißer Hintergrund */
+border: 1px solid rgba(0,0,0,0.05); /* Feine Grenze */
+color: var(--text); /* Textfarbe */
+font-weight: 700; /* Fetter Text */
+box-shadow: 0 6px 12px rgba(0,0,0,0.08); /* Schatteneffekt */
+}
+
+/* Pill Dark Mode */
+body:has(#themeToggle:checked) .pill { 
+background: rgba(255,255,255,0.12); /* Transparenter Hintergrund dunkel */
+border-color: rgba(255,255,255,0.06); /* Grenzenfarbe dunkel */
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -341,170 +699,6 @@ border-radius: 14px; /* Abgerundete Ecken */
 }
 
 
-
-
-
-
-
-
-
-
-
-
-/* Side Panel Overlay - Dunkler Hintergrund */
-.side-overlay { 
-  display: none; /* Ausgeblendet */
-  position: fixed; /* Feste Positionierung */
-  top: 0; /* Oben positioniert */
-  left: 0; /* Links positioniert */
-  width: 100%; /* Volle Breite */
-  height: 100%; /* Volle Höhe */
-  background: rgba(0,0,0,0.5); /* Halbdurchsichtiger schwarz */
-  z-index: 999; /* Höhe der Ebene */
-}
-
-/* Side Panel Overlay - aktiv */
-.side-overlay.active { 
-  display: block; /* Angezeigt */
-}
-
-/* Side Panel - seitliches Menü */
-.side-panel { 
-  position: fixed; /* Feste Positionierung */
-  top: 0; /* Oben positioniert */
-  right: -400px; /* Anfangs außerhalb des Bildschirms */
-  width: 400px; /* Breite */
-  height: 100%; /* Volle Höhe */
-  background: var(--surface-strong); /* Hintergrundfarbe */
-  box-shadow: -4px 0 12px rgba(0,0,0,0.25); /* Schatteneffekt */
-  transition: right 0.3s ease; /* Transitions-Animation */
-  z-index: 1000; /* Höhe der Ebene */
-  overflow-y: auto; /* Vertikaler Scroll */
-  padding: 2rem; /* Innenpaddung */
-  color: var(--text); /* Textfarbe */
-}
-
-/* Side Panel - aktiv */
-.side-panel.active { 
-  right: 0; /* In den Bildschirm schieben */
-}
-
-/* Side Panel Close Button */
-.side-close { 
-  position: absolute; /* Absolute Positionierung */
-  top: 1rem; /* Oben positioniert */
-  right: 1rem; /* Rechts positioniert */
-  background: var(--accent); /* Akzentfarbe */
-  color: white; /* Weiße Textfarbe */
-  border: none; /* Keine Grenze */
-  width: 35px; /* Breite */
-  height: 35px; /* Höhe */
-  border-radius: 50%; /* Kreis Form */
-  cursor: pointer; /* Mauszeiger */
-  font-size: 1.5rem; /* Schriftgröße */
-}
-
-/* Side Panel Überschrift */
-.side-panel h2 { 
-  color: var(--text); /* Textfarbe */
-  margin-bottom: 0.75rem; /* Untenpaddung */
-}
-
-/* Side Panel Paragraph */
-.side-panel p { 
-  color: var(--muted); /* Gedämpfte Farbe */
-  line-height: 1.5; /* Zeilenabstand */
-}
-
-
-
-
-
-
-
-
-
-
-/* Buttons - Schaltflächen */
-
-/* Offcanvas Button - seitlicher Panel Button */
-.offcanvas-btn { 
-  background: linear-gradient(120deg, #ff8f70, #ff3d54); /* Rotes Gradient */
-  color: #0b0b0b; /* Dunkle Textfarbe */
-  border: 1px solid rgba(0,0,0,0.08); /* Feine Grenze */
-  padding: 0.7rem 1.5rem; /* Innenpaddung */
-  border-radius: 999px; /* Vollständig abgerundete Ecken */
-  cursor: pointer; /* Mauszeiger */
-  font-weight: 800; /* Sehr fetter Text */
-  font-size: 1rem; /* Schriftgröße */
-  box-shadow: 0 12px 22px rgba(0,0,0,0.18), 0 0 0 1px rgba(255,255,255,0.45) inset; /* Schatteneffekt */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
-}
-
-/* Offcanvas Button - Hover */
-.offcanvas-btn:hover { 
-  transform: translateY(-2px); /* Nach oben bewegen */
-  box-shadow: 0 14px 24px rgba(0,0,0,0.22); /* Verstärkter Schatten */
-}
-
-/* Primary Button - Hauptschaltfläche */
-.btn-primary { 
-  display: inline-flex; /* Inline Flexbox */
-  align-items: center; /* Vertikal zentriert */
-  gap: 0.4rem; /* Abstand zu Icon */
-  padding: 0.75rem 1.2rem; /* Innenpaddung */
-  border-radius: 12px; /* Abgerundete Ecken */
-  background: linear-gradient(120deg, var(--sponge-yellow), var(--sponge-blue)); /* Gelb-Grün Gradient */
-  color: var(--text-dark); /* Dunkle Textfarbe */
-  font-weight: 800; /* Sehr fetter Text */
-  text-decoration: none; /* Keine Unterstreichung */
-  box-shadow: 0 10px 18px rgba(0,0,0,0.12); /* Schatteneffekt */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
-}
-
-/* Primary Button - Hover */
-.btn-primary:hover {
-  transform: translateY(-2px); /* Nach oben bewegen */
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2); /* Verstärkter Schatten */
-}
-
-/* Ghost Button - transparente Schaltfläche */
-.btn-ghost { 
-  display: inline-flex; /* Inline Flexbox */
-  align-items: center; /* Vertikal zentriert */
-  gap: 0.4rem; /* Abstand zu Icon */
-  padding: 0.75rem 1.2rem; /* Innenpaddung */
-  border-radius: 12px; /* Abgerundete Ecken */
-  border: 1px solid rgba(0,0,0,0.08); /* Feine Grenze */
-  color: var(--text); /* Textfarbe */
-  background: transparent; /* Transparent */
-  text-decoration: none; /* Keine Unterstreichung */
-  font-weight: 700; /* Fetter Text */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Animationen */
-}
-
-/* Ghost Button - Hover */
-.btn-ghost:hover {
-  transform: translateY(-2px); /* Nach oben bewegen */
-  background: rgba(255, 255, 255, 0.1); /* Halbdurchsichtiger weißer Hintergrund */
-}
-
-/* Ghost Button Dark Mode */
-body:has(#themeToggle:checked) .btn-ghost { 
-  border-color: rgba(255,255,255,0.18); /* Grenzenfarbe dunkel */
-}
-
-/* Divider - Trennlinie */
-.divider { 
-  height: 1px; /* Höhe einer Linie */
-  margin: 1.8rem 0; /* Außenpaddung */
-  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.12), transparent); /* Gradient Linie */
-}
-
-/* Divider Dark Mode */
-body:has(#themeToggle:checked) .divider { 
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent); /* Gradient Linie dunkel */
-}
 
 
 
@@ -569,80 +763,6 @@ body:has(#themeToggle:checked) .divider {
   transform: scale(1.05); /* Vergrößern */
   cursor: pointer; /* Mauszeiger */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Quiz - Quiz Formular */
-.quiz-form { 
-  background: var(--surface-strong); /* Hintergrundfarbe */
-  padding: 2rem; /* Innenpaddung */
-  border-radius: 10px; /* Abgerundete Ecken */
-  margin-top: 1rem; /* Obenpaddung */
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12); /* Schatteneffekt */
-}
-
-/* Quiz Frage */
-.quiz-question { 
-  margin-bottom: 2rem; /* Untenpaddung */
-  padding: 1.5rem; /* Innenpaddung */
-  background: var(--surface); /* Hintergrundfarbe */
-  border-radius: 10px; /* Abgerundete Ecken */
-}
-
-/* Quiz Frage Überschrift */
-.quiz-question h3 { 
-  margin-bottom: 1rem; /* Untenpaddung */
-  color: var(--text); /* Textfarbe */
-}
-
-/* Quiz Antwort-Optionen Label */
-.quiz-options label { 
-  display: block; /* Block Element */
-  padding: 1rem; /* Innenpaddung */
-  background: var(--surface-strong); /* Hintergrundfarbe */
-  border: 2px solid var(--ocean-light); /* Grenze */
-  border-radius: 8px; /* Abgerundete Ecken */
-  cursor: pointer; /* Mauszeiger */
-  margin-bottom: 0.8rem; /* Untenpaddung */
-  transition: all 0.3s ease; /* Animationen */
-}
-
-/* Quiz Antwort-Optionen Label - Hover */
-.quiz-options label:hover { 
-  background: var(--sponge-yellow); /* Gelber Hintergrund */
-  border-color: var(--ocean-dark); /* Dunkle Grenzenfarbe */
-  transform: translateX(5px); /* Nach rechts bewegen */
-}
-
-/* Quiz Radio Button */
-.quiz-options input[type="radio"] { 
-  margin-right: 0.8rem; /* Rechtspaddung */
-}
-
-/* Quiz Ergebnis */
-.quiz-result { 
-  margin-top: 2rem; /* Obenpaddung */
-  padding: 2rem; /* Innenpaddung */
-  background: var(--sponge-yellow); /* Gelber Hintergrund */
-  border-radius: 10px; /* Abgerundete Ecken */
-  text-align: center; /* Text zentriert */
-  font-size: 1.5rem; /* Schriftgröße */
-  font-weight: bold; /* Fetter Text */
-}
-
 
 
 
@@ -794,136 +914,12 @@ body:has(#themeToggle:checked) .data-table tbody td {
 
 
 
-/* Stat Grid - Statistik Gitterlayout */
-.stat-grid { 
-display: grid; /* CSS Grid Layout */
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive Spalten */
-gap: 1rem; /* Abstand */
-margin-top: 1.5rem; /* Obenpaddung */
-}
-
-/* Statistik Karte */
-.stat-card { 
-  background: var(--surface-strong); /* Hintergrundfarbe */
-  border-radius: 14px; /* Abgerundete Ecken */
-  padding: 1.2rem 1.4rem; /* Innenpaddung */
-  box-shadow: 0 8px 18px rgba(0,0,0,0.1); /* Schatteneffekt */
-  border: 1px solid rgba(255,255,255,0.06); /* Feine Grenze */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
-}
-
-/* Statistik Karte Hover */
-.stat-card:hover {
-  transform: translateY(-3px); /* Nach oben bewegen */
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* Verstärkter Schatten */
-}
-
-/* Statistik Wert */
-.stat-value { 
-font-size: 1.6rem; /* Schriftgröße */
-font-weight: 800; /* Sehr fetter Text */
-color: var(--text); /* Textfarbe */
-}
-
-/* Statistik Label */
-.stat-label { 
-margin-top: 0.2rem; /* Obenpaddung */
-color: var(--muted); /* Gedämpfte Farbe */
-font-weight: 600; /* Fetter Text */
-letter-spacing: 0.2px; /* Zeichenabstand */
-}
-
-/* Pill Row - Reihe mit Pills */
-.pill-row { 
-display: flex; /* Flexbox Layout */
-flex-wrap: wrap; /* Elemente umbrechen */
-gap: 0.6rem; /* Abstand */
-margin-top: 1rem; /* Obenpaddung */
-}
-
-/* Pill - kleine Tag */
-.pill { 
-padding: 0.45rem 0.85rem; /* Innenpaddung */
-border-radius: 999px; /* Vollständig abgerundete Ecken */
-background: rgba(255,255,255,0.7); /* Transparenter weißer Hintergrund */
-border: 1px solid rgba(0,0,0,0.05); /* Feine Grenze */
-color: var(--text); /* Textfarbe */
-font-weight: 700; /* Fetter Text */
-box-shadow: 0 6px 12px rgba(0,0,0,0.08); /* Schatteneffekt */
-}
-
-/* Pill Dark Mode */
-body:has(#themeToggle:checked) .pill { 
-background: rgba(255,255,255,0.12); /* Transparenter Hintergrund dunkel */
-border-color: rgba(255,255,255,0.06); /* Grenzenfarbe dunkel */
-}
 
 
 
 
 
 
-
-
-
-/* Theme Toggle - Design Umschalter (Licht/Dunkel) */
-.theme-toggle { 
-position: relative; /* Relative Positionierung */
-display: inline-flex; /* Inline Flexbox */
-align-items: center; /* Vertikal zentriert */
-justify-content: center; /* Horizontal zentriert */
-width: 68px; /* Breite */
-height: 34px; /* Höhe */
-padding: 0; /* Keine Innenpaddung */
-border-radius: 999px; /* Vollständig abgerundete Ecken */
-background: linear-gradient(90deg, var(--sponge-yellow), var(--sponge-blue)); /* Gelb-Grün Gradient */
-box-shadow: 0 6px 14px rgba(0,0,0,0.18); /* Schatteneffekt */
-cursor: pointer; /* Mauszeiger */
-border: 1px solid rgba(255,255,255,0.25); /* Grenze */
-}
-
-/* Theme Toggle Input */
-.theme-toggle input { 
-position: absolute; /* Absolute Positionierung */
-inset: 0; /* Alle Positionen auf 0 */
-opacity: 0; /* Unsichtbar */
-cursor: pointer; /* Mauszeiger */
-}
-
-/* Theme Toggle Thumb - beweglicher Kreis */
-.theme-toggle .toggle-thumb { 
-position: absolute; /* Absolute Positionierung */
-top: 3px; /* Oben positioniert */
-left: 3px; /* Links positioniert */
-width: 28px; /* Breite */
-height: 28px; /* Höhe */
-border-radius: 50%; /* Kreis Form */
-background: var(--surface-strong); /* Hintergrundfarbe */
-box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Schatteneffekt */
-}
-
-/* Theme Toggle Icons */
-.theme-toggle .icon-sun, .theme-toggle .icon-moon { 
-position: absolute; /* Absolute Positionierung */
-font-size: 14px; /* Schriftgröße */
-color: var(--text-dark); /* Textfarbe */
-}
-
-/* Theme Toggle Sonne Icon */
-.theme-toggle .icon-sun { 
-  left: 10px; /* Links positioniert */
-}
-
-/* Theme Toggle Mond Icon */
-.theme-toggle .icon-moon {
-right: 10px; /* Rechts positioniert */
-}
-
-/* Theme Toggle Input - aktiviert */
-.theme-toggle input:checked + .toggle-thumb { 
-transform: translateX(34px); /* Nach rechts bewegen */
-background: var(--surface); /* Hintergrundfarbe */
-}
 
 
 
@@ -967,6 +963,23 @@ footer {
     right: -100%; /* Außerhalb des Bildschirms */
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Animationen */
 /* Section Animation */
