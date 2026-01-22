@@ -1,4 +1,4 @@
-/* Farbvariablen - Farben im Hellmodus */
+/* Farben im Hellmodus */
 :root {
   --sponge-yellow: #FFD93D; /* Gelbe Primärfarbe */
   --sponge-blue: #6BCF7F; /* Grüne Sekundärfarbe */
@@ -15,7 +15,7 @@
   --navbar-bg: rgba(255,255,255,0.78); /* Navigationsleisten-Hintergrund */
 }
 
-/* Farbvariablen - Farben im Dunkelmodus */
+/*Farben im Dunkelmodus */
 body:has(#themeToggle:checked) {
   --sponge-yellow: #F4C534; /* Gelbe Primärfarbe dunkel */
   --sponge-blue: #4AAE73; /* Grüne Sekundärfarbe dunkel */
@@ -44,7 +44,7 @@ body {
   min-height: 100vh; /* Mindesthöhe - volle Bildschirmhöhe */
 }
 
-/* Navbar - Navigationsleiste */
+/* Navbar */
 .custom-nav {
   background: var(--navbar-bg); /* Hintergrund der Navbar */
   backdrop-filter: blur(12px); /* Blur-Effekt hinter der Navbar */
@@ -56,7 +56,7 @@ body {
   max-width: 1200px; /* Maximale Breite */
 }
 
-/* Navbar Brand - Logo */
+/* Logo */
 .navbar-brand {
   font-size: 1.8rem; /* Schriftgröße */
   font-weight: bold; /* Fetter Text */
@@ -64,7 +64,7 @@ body {
   text-decoration: none; /* Keine Unterstreichung */
 }
 
-/* Navbar Links - Navigation */
+/*  Navigation */
 .navbar-nav .nav-link { 
   color: var(--text); /* Linkfarbe */
   font-weight: 700; /* Fetter Text */
@@ -72,13 +72,13 @@ body {
   transform 0.2s ease; /* Transformations-Animation */
 }
 
-/* Navbar Links - Hover Effekt */
+/* Hover Effekt */
 .navbar-nav .nav-link:hover { 
   color: var(--accent); /* Farbe beim Hovern */
   transform: translateY(-1px); /* Leicht nach oben bewegen */
 }
 
-/* Navbar Toggler - Hamburger Menu */
+/*  Hamburger Menu */
 .navbar-toggler { 
   border-color: rgba(0,0,0,0.25); /* Grenzenfarbe */
 }
@@ -127,7 +127,7 @@ body:has(#themeToggle:checked) .navbar-toggler-icon {
 
 
 
-/* Side Panel Overlay - Dunkler Hintergrund */
+/*  Dunkler Hintergrund */
 .side-overlay { 
   display: none; /* Ausgeblendet */
   position: fixed; /* Feste Positionierung */
@@ -139,12 +139,12 @@ body:has(#themeToggle:checked) .navbar-toggler-icon {
   z-index: 999; /* Höhe der Ebene */
 }
 
-/* Side Panel Overlay - aktiv */
+/*aktiv */
 .side-overlay.active { 
   display: block; /* Angezeigt */
 }
 
-/* Side Panel - seitliches Menü */
+/* seitliches Menü */
 .side-panel { 
   position: fixed; /* Feste Positionierung */
   top: 0; /* Oben positioniert */
@@ -180,13 +180,13 @@ body:has(#themeToggle:checked) .navbar-toggler-icon {
   font-size: 1.5rem; /* Schriftgröße */
 }
 
-/* Side Panel Überschrift */
+/* Überschrift */
 .side-panel h2 { 
   color: var(--text); /* Textfarbe */
   margin-bottom: 0.75rem; /* Untenpaddung */
 }
 
-/* Side Panel Paragraph */
+/* Paragraph */
 .side-panel p { 
   color: var(--muted); /* Gedämpfte Farbe */
   line-height: 1.5; /* Zeilenabstand */
@@ -218,9 +218,8 @@ body:has(#themeToggle:checked) .navbar-toggler-icon {
 
 
 
-/* Buttons - Schaltflächen */
 
-/* Offcanvas Button - seitlicher Panel Button */
+/* seitlicher Panel Button */
 .offcanvas-btn { 
   background: linear-gradient(120deg, #ff8f70, #ff3d54); /* Rotes Gradient */
   color: #0b0b0b; /* Dunkle Textfarbe */
@@ -234,13 +233,13 @@ body:has(#themeToggle:checked) .navbar-toggler-icon {
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
 }
 
-/* Offcanvas Button - Hover */
+/* Hover */
 .offcanvas-btn:hover { 
   transform: translateY(-2px); /* Nach oben bewegen */
   box-shadow: 0 14px 24px rgba(0,0,0,0.22); /* Verstärkter Schatten */
 }
 
-/* Primary Button - Hauptschaltfläche */
+/* Hauptschaltfläche */
 .btn-primary { 
   display: inline-flex; /* Inline Flexbox */
   align-items: center; /* Vertikal zentriert */
@@ -255,39 +254,14 @@ body:has(#themeToggle:checked) .navbar-toggler-icon {
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
 }
 
-/* Primary Button - Hover */
+/*  Hover */
 .btn-primary:hover {
   transform: translateY(-2px); /* Nach oben bewegen */
   box-shadow: 0 12px 24px rgba(0,0,0,0.2); /* Verstärkter Schatten */
 }
 
-/* Ghost Button - transparente Schaltfläche */
-.btn-ghost { 
-  display: inline-flex; /* Inline Flexbox */
-  align-items: center; /* Vertikal zentriert */
-  gap: 0.4rem; /* Abstand zu Icon */
-  padding: 0.75rem 1.2rem; /* Innenpaddung */
-  border-radius: 12px; /* Abgerundete Ecken */
-  border: 1px solid rgba(0,0,0,0.08); /* Feine Grenze */
-  color: var(--text); /* Textfarbe */
-  background: transparent; /* Transparent */
-  text-decoration: none; /* Keine Unterstreichung */
-  font-weight: 700; /* Fetter Text */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Animationen */
-}
 
-/* Ghost Button - Hover */
-.btn-ghost:hover {
-  transform: translateY(-2px); /* Nach oben bewegen */
-  background: rgba(255, 255, 255, 0.1); /* Halbdurchsichtiger weißer Hintergrund */
-}
-
-/* Ghost Button Dark Mode */
-body:has(#themeToggle:checked) .btn-ghost { 
-  border-color: rgba(255,255,255,0.18); /* Grenzenfarbe dunkel */
-}
-
-/* Divider - Trennlinie */
+/*Trennlinie */
 .divider { 
   height: 1px; /* Höhe einer Linie */
   margin: 1.8rem 0; /* Außenpaddung */
@@ -306,7 +280,7 @@ body:has(#themeToggle:checked) .divider {
 
 
 
-/* Theme Toggle - Design Umschalter (Licht/Dunkel) */
+/* (Licht/Dunkel) */
 .theme-toggle { 
 position: relative; /* Relative Positionierung */
 display: inline-flex; /* Inline Flexbox */
@@ -330,7 +304,7 @@ opacity: 0; /* Unsichtbar */
 cursor: pointer; /* Mauszeiger */
 }
 
-/* Theme Toggle Thumb - beweglicher Kreis */
+/* beweglicher Kreis */
 .theme-toggle .toggle-thumb { 
 position: absolute; /* Absolute Positionierung */
 top: 3px; /* Oben positioniert */
@@ -359,7 +333,7 @@ color: var(--text-dark); /* Textfarbe */
 right: 10px; /* Rechts positioniert */
 }
 
-/* Theme Toggle Input - aktiviert */
+/*aktiviert */
 .theme-toggle input:checked + .toggle-thumb { 
 transform: translateX(34px); /* Nach rechts bewegen */
 background: var(--surface); /* Hintergrundfarbe */
@@ -379,7 +353,7 @@ background: var(--surface); /* Hintergrundfarbe */
 
 
 
-/* Hero Section - Großer Banner oben */
+/*Großer Banner oben */
 .hero {
   max-width: 1200px; /* Maximale Breite */
   margin: 3rem auto 2.5rem; /* Außenpaddung */
@@ -415,7 +389,7 @@ background: var(--surface); /* Hintergrundfarbe */
 
 
 
-/* Feature Chips - kleine Eigenschafts-Tags */
+/* kleine Eigenschafts-Tags */
 .feature-strip { 
   max-width: 1200px; /* Maximale Breite */
   margin: -1rem auto 2.5rem; /* Außenpaddung */
@@ -425,7 +399,7 @@ background: var(--surface); /* Hintergrundfarbe */
   justify-content: center; /* Zentriert */
 }
 
-/* Feature Chip - einzelner Tag */
+/* Feature Chip */
 .feature-chip { 
   padding: 0.65rem 1rem; /* Innenpaddung */
   border-radius: 12px; /* Abgerundete Ecken */
@@ -437,7 +411,7 @@ background: var(--surface); /* Hintergrundfarbe */
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Animationen */
 }
 
-/* Feature Chip - Hover Effekt */
+/*Hover Effekt */
 .feature-chip:hover {
   transform: translateY(-3px); /* Nach oben bewegen */
   box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Verstärkter Schatten */
@@ -469,7 +443,7 @@ body:has(#themeToggle:checked) .feature-chip:hover {
 
 
 
-/* Carousel - Bildkarussell */
+/* Carousel*/
 .carousel { 
   max-width: 1200px; /* Maximale Breite */
   margin: 2rem auto; /* Außenpaddung */
@@ -498,7 +472,7 @@ body:has(#themeToggle:checked) .feature-chip:hover {
   object-fit: cover; /* Bild ausfüllen */
 }
 
-/* Carousel Caption - Bildunterschrift */
+/*Bildunterschrift */
 .carousel-caption { 
 position: absolute; /* Absolute Positionierung */
 bottom: 20px; /* Position von unten */
@@ -529,7 +503,7 @@ border-radius: 14px; /* Abgerundete Ecken */
 
 
 
-/* Sections - Inhaltssektionen */
+/* Sections*/
 .section { 
   max-width: 1200px; /* Maximale Breite */
   margin: 3rem auto; /* Außenpaddung */
@@ -572,7 +546,7 @@ border-radius: 14px; /* Abgerundete Ecken */
 
 
 
-/* Stat Grid - Statistik Gitterlayout */
+/* Stat Grid */
 .stat-grid { 
 display: grid; /* CSS Grid Layout */
 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive Spalten */
@@ -611,7 +585,7 @@ font-weight: 600; /* Fetter Text */
 letter-spacing: 0.2px; /* Zeichenabstand */
 }
 
-/* Pill Row - Reihe mit Pills */
+/* Pill Row */
 .pill-row { 
 display: flex; /* Flexbox Layout */
 flex-wrap: wrap; /* Elemente umbrechen */
@@ -619,7 +593,7 @@ gap: 0.6rem; /* Abstand */
 margin-top: 1rem; /* Obenpaddung */
 }
 
-/* Pill - kleine Tag */
+/*kleine Tag */
 .pill { 
 padding: 0.45rem 0.85rem; /* Innenpaddung */
 border-radius: 999px; /* Vollständig abgerundete Ecken */
@@ -657,7 +631,7 @@ border-color: rgba(255,255,255,0.06); /* Grenzenfarbe dunkel */
 
 
 
-/* Cards Grid - Gitterlayout für Karten */
+/* Cards Grid  */
 .cards-grid { 
   display: grid; /* CSS Grid Layout */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive Spalten */
@@ -714,7 +688,7 @@ border-color: rgba(255,255,255,0.06); /* Grenzenfarbe dunkel */
 
 
 
-/* Calendar - Kalender */
+/* Calendar*/
 .calendar { 
   background: var(--surface-strong); /* Hintergrundfarbe */
   padding: 1.5rem; /* Innenpaddung */
@@ -757,7 +731,7 @@ border-color: rgba(255,255,255,0.06); /* Grenzenfarbe dunkel */
   transition: all 0.3s ease; /* Animationen */
 }
 
-/* Kalender Datum - Hover */
+/* Kalender Datum Hover */
 .calendar-date:hover { 
   background: var(--sponge-yellow); /* Gelber Hintergrund */
   transform: scale(1.05); /* Vergrößern */
@@ -779,7 +753,7 @@ border-color: rgba(255,255,255,0.06); /* Grenzenfarbe dunkel */
 
 
 
-/* Map - Karte Container */
+/* Karte Container */
 .map-container { 
   width: 100%; /* Volle Breite */
   height: 450px; /* Feste Höhe */
@@ -806,14 +780,14 @@ border-color: rgba(255,255,255,0.06); /* Grenzenfarbe dunkel */
 
 
 
-/* Info Grid - Informations-Gitterlayout */
+/* Info Grid*/
 .info-grid { 
   display: grid; /* CSS Grid Layout */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive Spalten */
   gap: 1.5rem; /* Abstand */
 }
 
-/* Info Card - Informationskarte */
+/* Info Card */
 .info-card { 
   background: var(--surface-strong); /* Hintergrundfarbe */
   border-radius: 12px; /* Abgerundete Ecken */
@@ -823,7 +797,7 @@ border-color: rgba(255,255,255,0.06); /* Grenzenfarbe dunkel */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animationen */
 }
 
-/* Info Card - Hover */
+/*  Hover */
 .info-card:hover {
   transform: translateY(-5px); /* Nach oben bewegen */
   box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Verstärkter Schatten */
@@ -857,7 +831,7 @@ border-color: rgba(255,255,255,0.06); /* Grenzenfarbe dunkel */
 
 
 
-/* Data Table - Datentabelle */
+/*Datentabelle */
 .data-table { 
   width: 100%; /* Volle Breite */
   border-collapse: collapse; /* Grenzen zusammenfassen */
@@ -925,7 +899,7 @@ body:has(#themeToggle:checked) .data-table tbody td {
 
 
 
-/* Footer - Fußzeile */
+/* Footer*/
 footer { 
   background: var(--ocean-dark); /* Dunkler Hintergrund */
   color: white; /* Weiße Textfarbe */
@@ -934,7 +908,13 @@ footer {
   margin-top: 3rem; /* Obenpaddung */
 }
 
-/* Responsive Design - Mobile Ansicht */
+
+
+
+
+
+
+/* Responsive Design */
 @media (max-width: 768px) {
   /* Navbar mobile */
   .custom-nav { 
@@ -962,44 +942,4 @@ footer {
     width: 100%; /* Volle Breite */
     right: -100%; /* Außerhalb des Bildschirms */
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Animationen */
-/* Section Animation */
-.section {
-  animation: fadeIn 0.8s ease-out; /* Einblend-Animation */
-}
-
-/* Hero Überschrift Animation */
-.hero h1 {
-  animation: slideInLeft 0.8s ease-out; /* Eingleit-Animation von links */
-}
-
-/* Video Container Animation */
-.video-container {
-  animation: fadeIn 1s ease-out; /* Einblend-Animation */
-  max-width: 1200px; /* Maximale Breite */
-  margin: 2rem auto; /* Außenpaddung */
-}
-
-/* Smooth Scroll - sanftes Scrollen */
-html {
-  scroll-behavior: smooth; /* Sanftes Scroll-Verhalten */
 }
