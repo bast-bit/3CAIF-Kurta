@@ -1,0 +1,370 @@
+/* Grundeinstellungen für alle Elemente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hintergrund und Schrift */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+header {
+    background: linear-gradient(135deg, #cc0000 0%, #990000 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 20px 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dekorativer Pokéball-Kreis im Hintergrund */
+header::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 30px solid rgba(255, 255, 255, 0.08);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 30px solid rgba(255, 255, 255, 0.05);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative; /* über den ::before Kreisen */
+}
+
+header p {
+    font-size: 0.95rem;
+    margin-top: 8px;
+    opacity: 0.8;
+    position: relative;
+}
+
+main {
+    max-width: 680px;
+    margin: 30px auto;
+    padding: 0 15px 40px;
+}
+
+/* Sections: dunkle Karte mit weißem Inhalt */
+section {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-bottom: 18px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #cc0000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Roter Strich vor jeder Überschrift */
+section h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 18px;
+    background-color: #cc0000;
+    border-radius: 2px;
+}
+
+
+/* Flexbox: Input oben, Buttons darunter */
+.suche-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Suchfeld: volle Breite */
+#pokemon-input {
+    width: 100%;
+    padding: 13px 16px;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: border-color 0.2s;
+    background-color: #fafafa;
+}
+
+#pokemon-input:focus {
+    outline: none;
+    border-color: #cc0000;
+    background-color: #fff;
+}
+
+/* Buttons nebeneinander, gleiche Breite */
+.btn-gruppe {
+    display: flex;
+    gap: 10px;
+}
+
+#suchen-btn, #zufall-btn {
+    flex: 1;
+    padding: 13px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Suchen-Button: Rot */
+#suchen-btn {
+    background-color: #cc0000;
+    color: white;
+}
+
+#suchen-btn:hover {
+    background-color: #aa0000;
+}
+
+/* Zufalls-Button: Orange */
+#zufall-btn {
+    background-color: #f5a623;
+    color: white;
+}
+
+#zufall-btn:hover {
+    background-color: #d48c1a;
+}
+
+/* Kurzes "Drücken"-Gefühl beim Klick */
+#suchen-btn:active, #zufall-btn:active {
+    transform: scale(0.97);
+}
+
+/* Hinweistext und Lade-Text */
+.hinweis, .laden {
+    color: #aaa;
+    font-style: italic;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.95rem;
+}
+
+/* Fehlertext */
+.fehler {
+    color: #cc0000;
+    text-align: center;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* Pokémon-Karte: zweispaltig — Bild links, Info rechts */
+.pokemon-karte-inhalt {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+/* Linke Spalte: Bild */
+.pokemon-bild-spalte {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* Pokémon-Bild */
+.pokemon-bild {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+/* Rechte Spalte: Info */
+.pokemon-info-spalte {
+    flex: 1;
+}
+
+/* Pokémon-Name */
+.pokemon-name {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+/* Typen-Badges */
+.typen {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+/* Ein Typ-Badge */
+.typ {
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* Farben für jeden Pokémon-Typ */
+.typ-fire     { background-color: #F08030; }
+.typ-water    { background-color: #6890F0; }
+.typ-grass    { background-color: #78C850; }
+.typ-electric { background-color: #F8D030; color: #555; }
+.typ-normal   { background-color: #A8A878; }
+.typ-ice      { background-color: #98D8D8; color: #555; }
+.typ-fighting { background-color: #C03028; }
+.typ-poison   { background-color: #A040A0; }
+.typ-ground   { background-color: #E0C068; color: #555; }
+.typ-flying   { background-color: #A890F0; }
+.typ-psychic  { background-color: #F85888; }
+.typ-bug      { background-color: #A8B820; }
+.typ-rock     { background-color: #B8A038; }
+.typ-ghost    { background-color: #705898; }
+.typ-dragon   { background-color: #7038F8; }
+.typ-dark     { background-color: #705848; }
+.typ-steel    { background-color: #B8B8D0; color: #555; }
+.typ-fairy    { background-color: #EE99AC; }
+
+/* Stats als kleine Tabelle */
+.stats {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 4px 16px;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.stats p {
+    white-space: nowrap;
+}
+
+/* Favorit-Button */
+.btn-favorit {
+    width: 100%;
+    padding: 10px;
+    background-color: #f5a623;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-favorit:hover {
+    background-color: #d48c1a;
+}
+
+#favoriten-liste {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* Jeder Favorit-Eintrag */
+.favorit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 14px 10px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    border: 2px solid #f0f0f0;
+    transition: border-color 0.2s;
+}
+
+.favorit-item:hover {
+    border-color: #cc0000;
+}
+
+/* Bild in der Favoritenliste */
+.favorit-bild {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 6px;
+}
+
+/* Name in der Favoritenliste */
+.favorit-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Entfernen-Button */
+.btn-loeschen {
+    padding: 5px 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-loeschen:hover {
+    background-color: #c0392b;
+}
+
+/* Hinweis-Text im Grid spannt beide Spalten */
+#favoriten-liste .hinweis {
+    grid-column: 1 / -1;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: #f5a623;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

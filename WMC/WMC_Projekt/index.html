@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <!-- Damit die Seite auf Mobilgeräten richtig skaliert -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Semantischer Header: Titel der App -->
+    <header>
+        <h1>Pokédex</h1>
+        <p>Suche nach Pokémon und speichere deine Favoriten</p>
+    </header>
+
+    <!-- Hauptbereich der Seite -->
+    <main>
+
+        <!-- Abschnitt: Suchfeld -->
+        <section id="suche">
+            <h2>Pokémon suchen</h2>
+            <!-- Wrapper für Input + Buttons (Flexbox-Layout per CSS) -->
+            <div class="suche-container">
+                <!-- Eingabefeld, list= verbindet es mit dem datalist für Autocomplete -->
+                <input type="text" id="pokemon-input" placeholder="Name oder Nummer eingeben..." list="pokemon-vorschlaege">
+                <!-- Datalist: Browser zeigt diese Werte als Vorschläge beim Tippen -->
+                <datalist id="pokemon-vorschlaege"></datalist>
+                <!-- Buttons nebeneinander in einer Gruppe -->
+                <div class="btn-gruppe">
+                    <button id="suchen-btn">Suchen</button>
+                    <button id="zufall-btn">&#127922; Zufällig</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Abschnitt: Pokémon-Karte (wird per JS befüllt) -->
+        <section id="anzeige-bereich">
+            <h2>Pokémon Info</h2>
+            <div id="pokemon-karte">
+                <!-- JavaScript fügt hier den Inhalt ein -->
+                <p class="hinweis">Gib einen Pokémon-Namen ein und klicke auf Suchen.</p>
+            </div>
+        </section>
+
+        <!-- Abschnitt: Favoriten-Liste (wird per JS befüllt) -->
+        <section id="favoriten-bereich">
+            <h2>Meine Favoriten</h2>
+            <div id="favoriten-liste">
+                <!-- JavaScript fügt hier die Favoriten ein -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Semantischer Footer -->
+    <footer>
+        <p>WMC Projekt &copy; 2025 &mdash; Daten von <a href="https://pokeapi.co" target="_blank">PokéAPI</a></p>
+    </footer>
+
+    <!-- JavaScript am Ende einbinden (HTML ist dann schon geladen) -->
+    <script src="app.js"></script>
+</body>
+</html>
