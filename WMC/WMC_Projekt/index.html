@@ -52,6 +52,53 @@
             </div>
         </section>
 
+        <!-- Abschnitt: Nach Typ durchsuchen (zusätzliches Feature) -->
+        <section id="typ-filter-bereich">
+            <h2>Nach Typ durchsuchen</h2>
+            <!-- Wrapper für Auswahl + Button (Flexbox-Layout per CSS) -->
+            <div class="typ-filter-container">
+                <!-- Dropdown mit allen 18 Pokémon-Typen, value = englischer Name für die API -->
+                <select id="typ-select">
+                    <option value="normal">Normal</option>
+                    <option value="fighting">Kampf</option>
+                    <option value="flying">Flug</option>
+                    <option value="poison">Gift</option>
+                    <option value="ground">Boden</option>
+                    <option value="rock">Gestein</option>
+                    <option value="bug">Käfer</option>
+                    <option value="ghost">Geist</option>
+                    <option value="steel">Stahl</option>
+                    <option value="fire">Feuer</option>
+                    <option value="water">Wasser</option>
+                    <option value="grass">Pflanze</option>
+                    <option value="electric">Elektro</option>
+                    <option value="psychic">Psycho</option>
+                    <option value="ice">Eis</option>
+                    <option value="dragon">Drache</option>
+                    <option value="dark">Unlicht</option>
+                    <option value="fairy">Fee</option>
+                </select>
+                <!-- Klick auf diesen Button startet die Typ-Suche -->
+                <button id="typ-such-btn">Anzeigen</button>
+            </div>
+            <!-- Container für die gefundenen Pokémon-Namen -->
+            <div id="typ-ergebnis-liste">
+                <!-- JavaScript fügt hier die gefundenen Namen ein -->
+            </div>
+        </section>
+
+        <!-- Abschnitt: Pokémon-Vergleich (zusätzliches Feature) -->
+        <section id="vergleich-bereich">
+            <h2>Pokémon-Vergleich</h2>
+            <!-- Container für die Vergleichstabelle, wird per JS befüllt -->
+            <div id="vergleich-inhalt">
+                <!-- JavaScript ersetzt diesen Hinweistext durch die Tabelle -->
+                <p class="hinweis">Wähle bei zwei Pokémon "+ Vergleich" aus, um sie hier nebeneinander zu sehen.</p>
+            </div>
+            <!-- Leert den Vergleich wieder, damit man neu auswählen kann -->
+            <button id="vergleich-reset-btn">Vergleich zurücksetzen</button>
+        </section>
+
     </main>
 
     <!-- Semantischer Footer -->

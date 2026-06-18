@@ -290,6 +290,25 @@ section h2::before {
     background-color: #d48c1a;
 }
 
+/* Vergleich-Button — gleiche Form wie Favorit-Button, eigene Farbe */
+.btn-vergleich {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-vergleich:hover {
+    background-color: #333;
+}
+
 #favoriten-liste {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -350,6 +369,102 @@ section h2::before {
 /* Hinweis-Text im Grid spannt beide Spalten */
 #favoriten-liste .hinweis {
     grid-column: 1 / -1;
+}
+
+
+/* Typ-Filter: Auswahl + Button nebeneinander */
+.typ-filter-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+#typ-select {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+#typ-such-btn {
+    padding: 10px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #cc0000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#typ-such-btn:hover {
+    background-color: #aa0000;
+}
+
+/* Ergebnisliste der Typ-Suche: klickbare Chips */
+#typ-ergebnis-liste {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.typ-chip {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.typ-chip:hover {
+    opacity: 0.8;
+}
+
+/* Vergleichstabelle */
+.vergleich-tabelle {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.vergleich-tabelle th, .vergleich-tabelle td {
+    padding: 8px 6px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.vergleich-tabelle th {
+    text-align: left;
+    color: #555;
+    font-weight: 600;
+}
+
+/* Höherer Wert beim Vergleich hervorheben */
+.vergleich-besser {
+    color: #2e8b57;
+    font-weight: 800;
+}
+
+#vergleich-reset-btn {
+    margin-top: 14px;
+    width: 100%;
+    padding: 10px;
+    background-color: #999;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#vergleich-reset-btn:hover {
+    background-color: #777;
 }
 
 
