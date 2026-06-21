@@ -257,7 +257,7 @@ ul {
 
 .todo-item {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto auto minmax(0, 1fr) auto auto;
   align-items: center;
   gap: 10px;
   padding: 11px 13px;
@@ -265,6 +265,34 @@ ul {
   background: var(--surface-strong);
   border: 1px solid rgba(110, 138, 166, 0.12);
   box-shadow: 0 6px 18px rgba(88, 114, 140, 0.1);
+}
+
+.todo-priority {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  padding: 3px 6px;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.priority-1 { background: #8aa9bd; }
+.priority-2 { background: #6fa3c7; }
+.priority-3 { background: #d6a24b; }
+.priority-4 { background: #cf7d4f; }
+.priority-5 { background: var(--danger); }
+
+.todo-priority-select {
+  padding: 5px 7px;
+  border-radius: 10px;
+  border: 1px solid rgba(143, 167, 189, 0.3);
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--headline);
+  font: inherit;
+  font-size: 0.85rem;
 }
 
 .todo-item.is-complete {
@@ -407,7 +435,7 @@ ul {
   }
 
   .todo-item {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto auto 1fr auto;
   }
 
   .todo-delete {

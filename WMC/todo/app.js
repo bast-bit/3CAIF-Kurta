@@ -50,13 +50,28 @@ function createTodoElement(todo) {
   todoText.className = "todo-text";
   todoText.innerText = todo.text;
 
+  const priorityBadge = document.createElement("span");
+  priorityBadge.className = `todo-priority priority-${todo.priority}`;
+  priorityBadge.innerText = `P${todo.priority}`;
+
+  const prioritySelect = document.createElement("select");
+  prioritySelect.className = "todo-priority-select";
+  for (let p = 1; p <= 5; p++) {
+    const option = document.createElement("option");
+    option.value = p;
+    option.innerText = p;
+    option.selected = p === todo.priority;
+    prioritySelect.appendChild(option);
+  }
+  prioritySelect.addEventListener("change", (e) => onTodoPriorityChanged(todo, Number(e.target.value)));
+
   const deleteBtn = document.createElement("input");
   deleteBtn.className = "todo-delete";
   deleteBtn.value = "Delete";
   deleteBtn.type = "button";
   deleteBtn.addEventListener("click", (_) => onDeleteButtonClicked(todo));
 
-  listItem.append(cbDone, todoText, deleteBtn);
+  listItem.append(cbDone, priorityBadge, todoText, prioritySelect, deleteBtn);
   return listItem;
 }
 
@@ -92,10 +107,16 @@ function onTodoStatusChanged(todo) {
   render();
 }
 
+function onTodoPriorityChanged(todo, newPriority) {
+  todo.priority = newPriority;
+  render();
+}
+
 function onKeyDownEvent(e) {
   if (e.key === "Enter") {
     onAddButtonClicked();
   }
+}
 
 addBtn.addEventListener("click", (_) => onAddButtonClicked());
 newTodoText.addEventListener("keydown", (e) => onKeyDownEvent(e));
